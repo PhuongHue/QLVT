@@ -39,8 +39,10 @@
             this.tSLabelMNV = new System.Windows.Forms.ToolStripStatusLabel();
             this.tSLabelName = new System.Windows.Forms.ToolStripStatusLabel();
             this.tSLabelNhom = new System.Windows.Forms.ToolStripStatusLabel();
+            this.componentNV1 = new QLVT.Components.ComponentNV();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
             this.tabControl.SuspendLayout();
+            this.pageNV.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +66,7 @@
             // 
             // pageNV
             // 
+            this.pageNV.Controls.Add(this.componentNV1);
             this.pageNV.Name = "pageNV";
             this.pageNV.Size = new System.Drawing.Size(932, 398);
             this.pageNV.Text = "Nhân viên";
@@ -71,31 +74,31 @@
             // pageVT
             // 
             this.pageVT.Name = "pageVT";
-            this.pageVT.Size = new System.Drawing.Size(932, 423);
+            this.pageVT.Size = new System.Drawing.Size(932, 398);
             this.pageVT.Text = "Vật tư";
             // 
             // pageKho
             // 
             this.pageKho.Name = "pageKho";
-            this.pageKho.Size = new System.Drawing.Size(932, 423);
+            this.pageKho.Size = new System.Drawing.Size(932, 398);
             this.pageKho.Text = "DS Kho";
             // 
             // pageDH
             // 
             this.pageDH.Name = "pageDH";
-            this.pageDH.Size = new System.Drawing.Size(932, 423);
+            this.pageDH.Size = new System.Drawing.Size(932, 398);
             this.pageDH.Text = "Đơn đặt hàng";
             // 
             // pageNhap
             // 
             this.pageNhap.Name = "pageNhap";
-            this.pageNhap.Size = new System.Drawing.Size(932, 423);
+            this.pageNhap.Size = new System.Drawing.Size(932, 398);
             this.pageNhap.Text = "Nhập hàng";
             // 
             // pageXH
             // 
             this.pageXH.Name = "pageXH";
-            this.pageXH.Size = new System.Drawing.Size(932, 423);
+            this.pageXH.Size = new System.Drawing.Size(932, 398);
             this.pageXH.Text = "Xuất hàng";
             // 
             // statusStrip1
@@ -134,6 +137,14 @@
             this.tSLabelNhom.Size = new System.Drawing.Size(47, 15);
             this.tSLabelNhom.Text = "Nhóm: ";
             // 
+            // componentNV1
+            // 
+            this.componentNV1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.componentNV1.Location = new System.Drawing.Point(0, 0);
+            this.componentNV1.Name = "componentNV1";
+            this.componentNV1.Size = new System.Drawing.Size(932, 398);
+            this.componentNV1.TabIndex = 0;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -147,6 +158,7 @@
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).EndInit();
             this.tabControl.ResumeLayout(false);
+            this.pageNV.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -167,5 +179,6 @@
         private System.Windows.Forms.ToolStripStatusLabel tSLabelMNV;
         private System.Windows.Forms.ToolStripStatusLabel tSLabelName;
         private System.Windows.Forms.ToolStripStatusLabel tSLabelNhom;
+        private Components.ComponentNV componentNV1;
     }
 }

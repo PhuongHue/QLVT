@@ -17,6 +17,7 @@ namespace QLVT
         {
             InitializeComponent();
             SetInfoDangNhap();
+            Program.FillAllTable();
         }
 
         void SetInfoDangNhap()
