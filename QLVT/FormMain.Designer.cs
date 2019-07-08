@@ -28,10 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.tabControl = new DevExpress.XtraTab.XtraTabControl();
             this.pageNV = new DevExpress.XtraTab.XtraTabPage();
+            this.componentNV1 = new QLVT.Components.ComponentNV();
             this.pageVT = new DevExpress.XtraTab.XtraTabPage();
             this.pageKho = new DevExpress.XtraTab.XtraTabPage();
+            this.componentVT1 = new QLVT.Components.ComponentKho();
+            this.khoBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.pageDH = new DevExpress.XtraTab.XtraTabPage();
             this.pageNhap = new DevExpress.XtraTab.XtraTabPage();
             this.pageXH = new DevExpress.XtraTab.XtraTabPage();
@@ -39,10 +43,14 @@
             this.tSLabelMNV = new System.Windows.Forms.ToolStripStatusLabel();
             this.tSLabelName = new System.Windows.Forms.ToolStripStatusLabel();
             this.tSLabelNhom = new System.Windows.Forms.ToolStripStatusLabel();
-            this.componentNV1 = new QLVT.Components.ComponentNV();
+            this.componentVT2 = new QLVT.Components.ComponentVT();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
             this.tabControl.SuspendLayout();
             this.pageNV.SuspendLayout();
+            this.pageVT.SuspendLayout();
+            this.pageKho.SuspendLayout();
+            this.componentVT1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.khoBindingNavigator)).BeginInit();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,17 +79,53 @@
             this.pageNV.Size = new System.Drawing.Size(932, 398);
             this.pageNV.Text = "Nhân viên";
             // 
+            // componentNV1
+            // 
+            this.componentNV1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.componentNV1.Location = new System.Drawing.Point(0, 0);
+            this.componentNV1.Name = "componentNV1";
+            this.componentNV1.Size = new System.Drawing.Size(932, 398);
+            this.componentNV1.TabIndex = 0;
+            // 
             // pageVT
             // 
+            this.pageVT.Controls.Add(this.componentVT2);
             this.pageVT.Name = "pageVT";
             this.pageVT.Size = new System.Drawing.Size(932, 398);
             this.pageVT.Text = "Vật tư";
             // 
             // pageKho
             // 
+            this.pageKho.Controls.Add(this.componentVT1);
             this.pageKho.Name = "pageKho";
             this.pageKho.Size = new System.Drawing.Size(932, 398);
             this.pageKho.Text = "DS Kho";
+            // 
+            // componentVT1
+            // 
+            this.componentVT1.Controls.Add(this.khoBindingNavigator);
+            this.componentVT1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.componentVT1.Location = new System.Drawing.Point(0, 0);
+            this.componentVT1.Name = "componentVT1";
+            this.componentVT1.Size = new System.Drawing.Size(932, 398);
+            this.componentVT1.TabIndex = 1;
+            // 
+            // khoBindingNavigator
+            // 
+            this.khoBindingNavigator.AddNewItem = null;
+            this.khoBindingNavigator.CountItem = null;
+            this.khoBindingNavigator.DeleteItem = null;
+            this.khoBindingNavigator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.khoBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.khoBindingNavigator.MoveFirstItem = null;
+            this.khoBindingNavigator.MoveLastItem = null;
+            this.khoBindingNavigator.MoveNextItem = null;
+            this.khoBindingNavigator.MovePreviousItem = null;
+            this.khoBindingNavigator.Name = "khoBindingNavigator";
+            this.khoBindingNavigator.PositionItem = null;
+            this.khoBindingNavigator.Size = new System.Drawing.Size(932, 398);
+            this.khoBindingNavigator.TabIndex = 0;
+            this.khoBindingNavigator.Text = "bindingNavigator1";
             // 
             // pageDH
             // 
@@ -137,13 +181,13 @@
             this.tSLabelNhom.Size = new System.Drawing.Size(47, 15);
             this.tSLabelNhom.Text = "Nhóm: ";
             // 
-            // componentNV1
+            // componentVT2
             // 
-            this.componentNV1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.componentNV1.Location = new System.Drawing.Point(0, 0);
-            this.componentNV1.Name = "componentNV1";
-            this.componentNV1.Size = new System.Drawing.Size(932, 398);
-            this.componentNV1.TabIndex = 0;
+            this.componentVT2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.componentVT2.Location = new System.Drawing.Point(0, 0);
+            this.componentVT2.Name = "componentVT2";
+            this.componentVT2.Size = new System.Drawing.Size(932, 398);
+            this.componentVT2.TabIndex = 0;
             // 
             // FormMain
             // 
@@ -159,6 +203,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).EndInit();
             this.tabControl.ResumeLayout(false);
             this.pageNV.ResumeLayout(false);
+            this.pageVT.ResumeLayout(false);
+            this.pageKho.ResumeLayout(false);
+            this.componentVT1.ResumeLayout(false);
+            this.componentVT1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.khoBindingNavigator)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -180,5 +229,8 @@
         private System.Windows.Forms.ToolStripStatusLabel tSLabelName;
         private System.Windows.Forms.ToolStripStatusLabel tSLabelNhom;
         private Components.ComponentNV componentNV1;
+        private Components.ComponentKho componentVT1;
+        private System.Windows.Forms.BindingNavigator khoBindingNavigator;
+        private Components.ComponentVT componentVT2;
     }
 }

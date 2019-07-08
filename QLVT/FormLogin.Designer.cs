@@ -61,6 +61,7 @@
             // 
             this.v_DSPMComboBox.DataSource = this.v_DSPMBindingSource;
             this.v_DSPMComboBox.DisplayMember = "description";
+            this.v_DSPMComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.v_DSPMComboBox.FormattingEnabled = true;
             this.v_DSPMComboBox.Location = new System.Drawing.Point(207, 71);
             this.v_DSPMComboBox.Name = "v_DSPMComboBox";
@@ -80,6 +81,7 @@
             // 
             this.LoginPasswordTextBox.Location = new System.Drawing.Point(207, 164);
             this.LoginPasswordTextBox.Name = "LoginPasswordTextBox";
+            this.LoginPasswordTextBox.PasswordChar = '*';
             this.LoginPasswordTextBox.Size = new System.Drawing.Size(232, 21);
             this.LoginPasswordTextBox.TabIndex = 2;
             this.LoginPasswordTextBox.Text = "123";

@@ -60,6 +60,18 @@
     <Compile Include="Components\ComponentNV.Designer.cs">
       <DependentUpon>ComponentNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\ComponentKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ComponentKho.Designer.cs">
+      <DependentUpon>ComponentKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ComponentVT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ComponentVT.Designer.cs">
+      <DependentUpon>ComponentVT.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +100,12 @@
     <EmbeddedResource Include="Components\ComponentNV.resx">
       <DependentUpon>ComponentNV.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Components\ComponentKho.resx">
+      <DependentUpon>ComponentKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ComponentVT.resx">
+      <DependentUpon>ComponentVT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +121,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
@@ -136,6 +155,9 @@
     <None Include="QLVT_MASTER_DataSet.xss">
       <DependentUpon>QLVT_MASTER_DataSet.xsd</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_reload.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
