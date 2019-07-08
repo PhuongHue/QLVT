@@ -35,17 +35,24 @@
             this.pageDH = new DevExpress.XtraTab.XtraTabPage();
             this.pageNhap = new DevExpress.XtraTab.XtraTabPage();
             this.pageXH = new DevExpress.XtraTab.XtraTabPage();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.tSLabelMNV = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tSLabelName = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tSLabelNhom = new System.Windows.Forms.ToolStripStatusLabel();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
             this.tabControl.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
             // 
-            this.tabControl.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tabControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tabControl.Location = new System.Drawing.Point(0, 0);
             this.tabControl.Name = "tabControl";
             this.tabControl.SelectedTabPage = this.pageNV;
-            this.tabControl.Size = new System.Drawing.Size(938, 451);
+            this.tabControl.Size = new System.Drawing.Size(938, 426);
             this.tabControl.TabIndex = 0;
             this.tabControl.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.pageNV,
@@ -58,7 +65,7 @@
             // pageNV
             // 
             this.pageNV.Name = "pageNV";
-            this.pageNV.Size = new System.Drawing.Size(932, 423);
+            this.pageNV.Size = new System.Drawing.Size(932, 398);
             this.pageNV.Text = "Nhân viên";
             // 
             // pageVT
@@ -91,17 +98,59 @@
             this.pageXH.Size = new System.Drawing.Size(932, 423);
             this.pageXH.Text = "Xuất hàng";
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tSLabelMNV,
+            this.tSLabelName,
+            this.tSLabelNhom});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 426);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(938, 25);
+            this.statusStrip1.TabIndex = 1;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // tSLabelMNV
+            // 
+            this.tSLabelMNV.BackColor = System.Drawing.Color.MistyRose;
+            this.tSLabelMNV.Margin = new System.Windows.Forms.Padding(5);
+            this.tSLabelMNV.Name = "tSLabelMNV";
+            this.tSLabelMNV.Size = new System.Drawing.Size(49, 15);
+            this.tSLabelMNV.Text = "Mã NV: ";
+            // 
+            // tSLabelName
+            // 
+            this.tSLabelName.BackColor = System.Drawing.Color.MistyRose;
+            this.tSLabelName.Margin = new System.Windows.Forms.Padding(5);
+            this.tSLabelName.Name = "tSLabelName";
+            this.tSLabelName.Size = new System.Drawing.Size(32, 15);
+            this.tSLabelName.Text = "Tên: ";
+            // 
+            // tSLabelNhom
+            // 
+            this.tSLabelNhom.BackColor = System.Drawing.Color.MistyRose;
+            this.tSLabelNhom.Margin = new System.Windows.Forms.Padding(5);
+            this.tSLabelNhom.Name = "tSLabelNhom";
+            this.tSLabelNhom.Size = new System.Drawing.Size(47, 15);
+            this.tSLabelNhom.Text = "Nhóm: ";
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(938, 451);
             this.Controls.Add(this.tabControl);
+            this.Controls.Add(this.statusStrip1);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).EndInit();
             this.tabControl.ResumeLayout(false);
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -114,5 +163,9 @@
         private DevExpress.XtraTab.XtraTabPage pageDH;
         private DevExpress.XtraTab.XtraTabPage pageNhap;
         private DevExpress.XtraTab.XtraTabPage pageXH;
+        private System.Windows.Forms.StatusStrip statusStrip1;
+        private System.Windows.Forms.ToolStripStatusLabel tSLabelMNV;
+        private System.Windows.Forms.ToolStripStatusLabel tSLabelName;
+        private System.Windows.Forms.ToolStripStatusLabel tSLabelNhom;
     }
 }

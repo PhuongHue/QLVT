@@ -16,6 +16,14 @@ namespace QLVT
         public FormMain()
         {
             InitializeComponent();
+            SetInfoDangNhap();
+        }
+
+        void SetInfoDangNhap()
+        {
+            tSLabelMNV.Text += Program._ketNoiDB.UserName;
+            tSLabelName.Text += Program._ketNoiDB.FullName;
+            tSLabelNhom.Text += Program._ketNoiDB.GroupId;
         }
     }
 }
