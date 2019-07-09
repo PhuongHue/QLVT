@@ -26,5 +26,16 @@ namespace QLVT
             tSLabelName.Text += Program._ketNoiDB.FullName;
             tSLabelNhom.Text += Program._ketNoiDB.GroupId;
         }
+
+        private void FormMain_Load(object sender, EventArgs e)
+        {
+            // TODO: This line of code loads data into the 'qLVT_MASTER_DataSet.V_DSPM' table. You can move, or remove it, as needed.
+            this.v_DSPMTableAdapter.Fill(this.qLVT_MASTER_DataSet.V_DSPM);
+        }
+
+        private void v_DSPMComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

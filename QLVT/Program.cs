@@ -47,6 +47,18 @@ namespace QLVT
 
         }
 
+        public static void updateAll()
+        {
+            try
+            {
+                TableAdapterManager.UpdateAll(QLVT_CN_DataSet);
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(e.Message);
+            }
+        }
+
         private static void ChangeConnection(SqlConnection sqlConnection)
         {
             ChiNhanhTableAdapter.Connection = sqlConnection;

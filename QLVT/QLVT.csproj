@@ -54,6 +54,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Components\ComponentDatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ComponentDatHang.Designer.cs">
+      <DependentUpon>ComponentDatHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\ComponentNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -97,6 +103,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLVT_MASTER_DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Components\ComponentDatHang.resx">
+      <DependentUpon>ComponentDatHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\ComponentNV.resx">
       <DependentUpon>ComponentNV.cs</DependentUpon>
     </EmbeddedResource>
