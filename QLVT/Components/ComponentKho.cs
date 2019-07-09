@@ -11,20 +11,21 @@ using DevExpress.XtraEditors;
 
 namespace QLVT.Components
 {
-    public partial class ComponentNV : DevExpress.XtraEditors.XtraUserControl
+    public partial class ComponentKho : DevExpress.XtraEditors.XtraUserControl
     {
-        public ComponentNV()
+        public ComponentKho()
         {
             InitializeComponent();
             chiNhanhBindingSource.DataSource = Program.QLVT_CN_DataSet;
+            chiNhanhTableAdapter.Fill(Program.QLVT_CN_DataSet.ChiNhanh);
         }
 
         private void chiNhanhBindingNavigatorSaveItem_Click(object sender, EventArgs e)
         {
             this.Validate();
             this.chiNhanhBindingSource.EndEdit();
-            Program.TableAdapterManager.UpdateAll(this.qLVT_CN_DataSet);
-            
+            this.tableAdapterManager.UpdateAll(this.qLVT_CN_DataSet);
+
         }
     }
 }
