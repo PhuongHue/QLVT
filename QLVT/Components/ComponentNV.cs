@@ -18,13 +18,5 @@ namespace QLVT.Components
             InitializeComponent();
             chiNhanhBindingSource.DataSource = Program.QLVT_CN_DataSet;
         }
-
-        private void chiNhanhBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.chiNhanhBindingSource.EndEdit();
-            Program.TableAdapterManager.UpdateAll(this.qLVT_CN_DataSet);
-            
-        }
     }
 }

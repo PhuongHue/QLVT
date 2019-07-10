@@ -33,18 +33,24 @@ namespace QLVT
         public static VattuTableAdapter VattuTableAdapter = new VattuTableAdapter();
 
         public static void FillAllTable()
-        { 
-            // fill tables
-            ChiNhanhTableAdapter.Fill(QLVT_CN_DataSet.ChiNhanh);
-            CTDDHTableAdapter.Fill(QLVT_CN_DataSet.CTDDH);
-            CTPNTableAdapter.Fill(QLVT_CN_DataSet.CTPN);
-            CTPXTableAdapter.Fill(QLVT_CN_DataSet.CTPX);
-            DatHangTableAdapter.Fill(QLVT_CN_DataSet.DatHang);
-            KhoTableAdapter.Fill(QLVT_CN_DataSet.Kho);
-            NhanVienTableAdapter.Fill(QLVT_CN_DataSet.NhanVien);
-            PhieuNhapTableAdapter.Fill(QLVT_CN_DataSet.PhieuNhap);
-            VattuTableAdapter.Fill(QLVT_CN_DataSet.Vattu);
-
+        {
+            try
+            {
+                // fill tables
+                ChiNhanhTableAdapter.Fill(QLVT_CN_DataSet.ChiNhanh);
+                CTDDHTableAdapter.Fill(QLVT_CN_DataSet.CTDDH);
+                CTPNTableAdapter.Fill(QLVT_CN_DataSet.CTPN);
+                CTPXTableAdapter.Fill(QLVT_CN_DataSet.CTPX);
+                DatHangTableAdapter.Fill(QLVT_CN_DataSet.DatHang);
+                KhoTableAdapter.Fill(QLVT_CN_DataSet.Kho);
+                NhanVienTableAdapter.Fill(QLVT_CN_DataSet.NhanVien);
+                PhieuNhapTableAdapter.Fill(QLVT_CN_DataSet.PhieuNhap);
+                VattuTableAdapter.Fill(QLVT_CN_DataSet.Vattu);
+            }
+            catch (SqlException e)
+            {
+                MessageBox.Show(SqlMessageResolver.SqlMessageResolve(e));
+            }
 
         }
 
@@ -58,10 +64,15 @@ namespace QLVT
             {
                 MessageBox.Show(SqlMessageResolver.SqlMessageResolve(e));
             }
+            catch (ArgumentException e)
+            {
+                MessageBox.Show(e.Message);
+            }
         }
 
-        private static void ChangeConnection(SqlConnection sqlConnection)
+        public static void ChangeConnection(SqlConnection sqlConnection)
         {
+            TableAdapterManager.Connection = sqlConnection;
             ChiNhanhTableAdapter.Connection = sqlConnection;
             CTDDHTableAdapter.Connection = sqlConnection;
             CTPNTableAdapter.Connection = sqlConnection;
@@ -75,6 +86,7 @@ namespace QLVT
 
         private static void InitServices()
         {
+
             TableAdapterManager.ChiNhanhTableAdapter = ChiNhanhTableAdapter;
             TableAdapterManager.CTDDHTableAdapter = CTDDHTableAdapter;
             TableAdapterManager.CTPNTableAdapter = CTPNTableAdapter;

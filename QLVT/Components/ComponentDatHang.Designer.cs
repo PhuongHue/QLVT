@@ -59,7 +59,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.btnReload = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cTDHBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
@@ -115,8 +114,9 @@
             // 
             this.khoComboBox.DataSource = this.khoBindingSource;
             this.khoComboBox.DisplayMember = "TENKHO";
+            this.khoComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.khoComboBox.FormattingEnabled = true;
-            this.khoComboBox.Location = new System.Drawing.Point(55, 3);
+            this.khoComboBox.Location = new System.Drawing.Point(57, 3);
             this.khoComboBox.Name = "khoComboBox";
             this.khoComboBox.Size = new System.Drawing.Size(411, 21);
             this.khoComboBox.TabIndex = 1;
@@ -146,7 +146,7 @@
             this.datHangGridControl.Location = new System.Drawing.Point(3, 33);
             this.datHangGridControl.MainView = this.gridView1;
             this.datHangGridControl.Name = "datHangGridControl";
-            this.datHangGridControl.Size = new System.Drawing.Size(401, 368);
+            this.datHangGridControl.Size = new System.Drawing.Size(407, 374);
             this.datHangGridControl.TabIndex = 0;
             this.datHangGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -246,9 +246,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel1.Controls.Add(this.datHangBindingNavigator);
             this.panel1.Controls.Add(this.datHangGridControl);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(407, 404);
+            this.panel1.Size = new System.Drawing.Size(413, 410);
             this.panel1.TabIndex = 3;
             // 
             // datHangBindingNavigator
@@ -268,8 +269,7 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.btnReload});
+            this.bindingNavigatorDeleteItem});
             this.datHangBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.datHangBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.datHangBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -277,7 +277,7 @@
             this.datHangBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.datHangBindingNavigator.Name = "datHangBindingNavigator";
             this.datHangBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.datHangBindingNavigator.Size = new System.Drawing.Size(407, 30);
+            this.datHangBindingNavigator.Size = new System.Drawing.Size(413, 30);
             this.datHangBindingNavigator.TabIndex = 1;
             this.datHangBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -369,17 +369,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
-            // btnReload
-            // 
-            this.btnReload.BackColor = System.Drawing.Color.Aqua;
-            this.btnReload.Image = global::QLVT.Properties.Resources.icon_reload;
-            this.btnReload.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnReload.Margin = new System.Windows.Forms.Padding(5);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(63, 20);
-            this.btnReload.Text = "Reload";
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
-            // 
             // panel2
             // 
             this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -388,9 +377,10 @@
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.cTDHBindingNavigator);
             this.panel2.Controls.Add(this.cTDDHGridControl);
-            this.panel2.Location = new System.Drawing.Point(416, 3);
+            this.panel2.Location = new System.Drawing.Point(413, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(407, 404);
+            this.panel2.Size = new System.Drawing.Size(413, 410);
             this.panel2.TabIndex = 4;
             // 
             // cTDHBindingNavigator
@@ -418,7 +408,7 @@
             this.cTDHBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.cTDHBindingNavigator.Name = "cTDHBindingNavigator";
             this.cTDHBindingNavigator.PositionItem = this.bindingNavigatorPositionItem1;
-            this.cTDHBindingNavigator.Size = new System.Drawing.Size(407, 30);
+            this.cTDHBindingNavigator.Size = new System.Drawing.Size(413, 30);
             this.cTDHBindingNavigator.TabIndex = 1;
             this.cTDHBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -523,7 +513,7 @@
             this.cTDDHGridControl.Location = new System.Drawing.Point(3, 33);
             this.cTDDHGridControl.MainView = this.gridView2;
             this.cTDDHGridControl.Name = "cTDDHGridControl";
-            this.cTDDHGridControl.Size = new System.Drawing.Size(401, 368);
+            this.cTDDHGridControl.Size = new System.Drawing.Size(407, 374);
             this.cTDDHGridControl.TabIndex = 0;
             this.cTDDHGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -629,7 +619,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton btnReload;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraGrid.GridControl cTDDHGridControl;
         private System.Windows.Forms.BindingSource cTDDHBindingSource;

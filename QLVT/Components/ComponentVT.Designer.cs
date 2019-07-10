@@ -45,7 +45,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.vattuBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.vattuGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
@@ -87,8 +86,7 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.vattuBindingNavigatorSaveItem});
+            this.bindingNavigatorDeleteItem});
             this.vattuBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.vattuBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.vattuBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -187,16 +185,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
-            // vattuBindingNavigatorSaveItem
-            // 
-            this.vattuBindingNavigatorSaveItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.vattuBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("vattuBindingNavigatorSaveItem.Image")));
-            this.vattuBindingNavigatorSaveItem.Margin = new System.Windows.Forms.Padding(5);
-            this.vattuBindingNavigatorSaveItem.Name = "vattuBindingNavigatorSaveItem";
-            this.vattuBindingNavigatorSaveItem.Size = new System.Drawing.Size(78, 20);
-            this.vattuBindingNavigatorSaveItem.Text = "Save Data";
-            this.vattuBindingNavigatorSaveItem.Click += new System.EventHandler(this.vattuBindingNavigatorSaveItem_Click);
-            // 
             // vattuGridControl
             // 
             this.vattuGridControl.DataSource = this.vattuBindingSource;
@@ -254,7 +242,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton vattuBindingNavigatorSaveItem;
         private DevExpress.XtraGrid.GridControl vattuGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
     }

@@ -14,6 +14,7 @@ namespace QLVT.BatLoi
             "PRIMARY KEY",
             "FOREIGN KEY",
             "CHECK",
+            "QUA SO LUONG",
             "Login failed"
         };
 
@@ -22,6 +23,7 @@ namespace QLVT.BatLoi
             "Lỗi vi phạm rằng buộc khóa chính ",
             "Lỗi vi phạm rằng buộc khóa ngoại ",
             "Lỗi vi phạm rằng buộc dữ liệu ",
+            "Lỗi quá số lượng ",
             "Đăng nhập thất bại"
         };
         public static string SqlMessageResolve(SqlException e)

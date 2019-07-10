@@ -35,12 +35,24 @@ namespace QLVT
 
         private void v_DSPMComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            try
+            {
+                Program._ketNoiDB.Server = v_DSPMComboBox.SelectedValue.ToString();
+                Program._ketNoiDB.NewSqlConnection();
+                Program.ChangeConnection(Program._ketNoiDB.sqlConnection);
+                Program.FillAllTable();
+            }
+            catch { }
         }
 
         private void btnSaveAll_Click(object sender, EventArgs e)
         {
             Program.updateAll();
+        }
+
+        private void btnReload_Click(object sender, EventArgs e)
+        {
+            Program.FillAllTable();
         }
     }
 }

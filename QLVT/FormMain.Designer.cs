@@ -52,12 +52,15 @@
             this.v_DSPMTableAdapter = new QLVT.QLVT_MASTER_DataSetTableAdapters.V_DSPMTableAdapter();
             this.v_DSPMComboBox = new System.Windows.Forms.ComboBox();
             this.btnSaveAll = new DevExpress.XtraEditors.SimpleButton();
+            this.btnReload = new DevExpress.XtraEditors.SimpleButton();
+            this.componentNhapHang1 = new QLVT.Components.ComponentNhapHang();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
             this.tabControl.SuspendLayout();
             this.pageNV.SuspendLayout();
             this.pageVT.SuspendLayout();
             this.pageKho.SuspendLayout();
             this.pageDH.SuspendLayout();
+            this.pageNhap.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_MASTER_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).BeginInit();
@@ -144,6 +147,7 @@
             // 
             // pageNhap
             // 
+            this.pageNhap.Controls.Add(this.componentNhapHang1);
             this.pageNhap.Name = "pageNhap";
             this.pageNhap.Size = new System.Drawing.Size(972, 399);
             this.pageNhap.Text = "Nhập hàng";
@@ -224,6 +228,7 @@
             // 
             this.v_DSPMComboBox.DataSource = this.v_DSPMBindingSource;
             this.v_DSPMComboBox.DisplayMember = "description";
+            this.v_DSPMComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.v_DSPMComboBox.FormattingEnabled = true;
             this.v_DSPMComboBox.Location = new System.Drawing.Point(80, 12);
             this.v_DSPMComboBox.Name = "v_DSPMComboBox";
@@ -234,8 +239,9 @@
             // 
             // btnSaveAll
             // 
+            this.btnSaveAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSaveAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.btnSaveAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnSaveAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSaveAll.ImageOptions.Image")));
             this.btnSaveAll.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
             this.btnSaveAll.Location = new System.Drawing.Point(910, 12);
             this.btnSaveAll.Name = "btnSaveAll";
@@ -244,11 +250,34 @@
             this.btnSaveAll.Text = "Save";
             this.btnSaveAll.Click += new System.EventHandler(this.btnSaveAll_Click);
             // 
+            // btnReload
+            // 
+            this.btnReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReload.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnReload.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnReload.ImageOptions.Image")));
+            this.btnReload.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnReload.Location = new System.Drawing.Point(848, 12);
+            this.btnReload.Name = "btnReload";
+            this.btnReload.Size = new System.Drawing.Size(56, 44);
+            this.btnReload.TabIndex = 4;
+            this.btnReload.Text = "Reload";
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
+            // 
+            // componentNhapHang1
+            // 
+            this.componentNhapHang1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.componentNhapHang1.Location = new System.Drawing.Point(0, 0);
+            this.componentNhapHang1.Name = "componentNhapHang1";
+            this.componentNhapHang1.Padding = new System.Windows.Forms.Padding(3);
+            this.componentNhapHang1.Size = new System.Drawing.Size(972, 399);
+            this.componentNhapHang1.TabIndex = 0;
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 491);
+            this.Controls.Add(this.btnReload);
             this.Controls.Add(this.btnSaveAll);
             this.Controls.Add(this.v_DSPMComboBox);
             this.Controls.Add(this.label1);
@@ -265,6 +294,7 @@
             this.pageVT.ResumeLayout(false);
             this.pageKho.ResumeLayout(false);
             this.pageDH.ResumeLayout(false);
+            this.pageNhap.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_MASTER_DataSet)).EndInit();
@@ -298,5 +328,7 @@
         private QLVT_MASTER_DataSetTableAdapters.V_DSPMTableAdapter v_DSPMTableAdapter;
         private System.Windows.Forms.ComboBox v_DSPMComboBox;
         private DevExpress.XtraEditors.SimpleButton btnSaveAll;
+        private DevExpress.XtraEditors.SimpleButton btnReload;
+        private Components.ComponentNhapHang componentNhapHang1;
     }
 }

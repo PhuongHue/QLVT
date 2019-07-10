@@ -48,7 +48,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.chiNhanhBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.chiNhanhGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -114,8 +113,7 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.chiNhanhBindingNavigatorSaveItem});
+            this.bindingNavigatorDeleteItem});
             this.chiNhanhBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.chiNhanhBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.chiNhanhBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -219,16 +217,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
-            // chiNhanhBindingNavigatorSaveItem
-            // 
-            this.chiNhanhBindingNavigatorSaveItem.BackColor = System.Drawing.Color.Aqua;
-            this.chiNhanhBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("chiNhanhBindingNavigatorSaveItem.Image")));
-            this.chiNhanhBindingNavigatorSaveItem.Margin = new System.Windows.Forms.Padding(5);
-            this.chiNhanhBindingNavigatorSaveItem.Name = "chiNhanhBindingNavigatorSaveItem";
-            this.chiNhanhBindingNavigatorSaveItem.Size = new System.Drawing.Size(78, 20);
-            this.chiNhanhBindingNavigatorSaveItem.Text = "Save Data";
-            this.chiNhanhBindingNavigatorSaveItem.Click += new System.EventHandler(this.chiNhanhBindingNavigatorSaveItem_Click);
-            // 
             // chiNhanhGridControl
             // 
             this.chiNhanhGridControl.DataSource = this.fKKhoKhoBindingSource;
@@ -318,7 +306,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton chiNhanhBindingNavigatorSaveItem;
         private QLVT_CN_DataSetTableAdapters.KhoTableAdapter khoTableAdapter;
         private DevExpress.XtraGrid.GridControl chiNhanhGridControl;
         private System.Windows.Forms.BindingSource fKKhoKhoBindingSource;

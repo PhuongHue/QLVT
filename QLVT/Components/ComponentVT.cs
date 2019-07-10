@@ -26,13 +26,5 @@ namespace QLVT.Components
             vattuBindingSource.DataSource = Program.QLVT_CN_DataSet;
             vattuTableAdapter.Fill(Program.QLVT_CN_DataSet.Vattu);
         }
-
-        private void vattuBindingNavigatorSaveItem_Click(object sender, EventArgs e)
-        {
-            this.Validate();
-            this.vattuBindingSource.EndEdit();
-            this.vattuTableAdapter.Update(Program.QLVT_CN_DataSet.Vattu);
-
-        }
     }
 }

@@ -48,7 +48,6 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.chiNhanhBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.chiNhanhGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -59,7 +58,6 @@
             this.colLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingNavigator)).BeginInit();
@@ -119,9 +117,7 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.chiNhanhBindingNavigatorSaveItem,
-            this.toolStripButton1});
+            this.bindingNavigatorDeleteItem});
             this.chiNhanhBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.chiNhanhBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.chiNhanhBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -225,16 +221,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
-            // chiNhanhBindingNavigatorSaveItem
-            // 
-            this.chiNhanhBindingNavigatorSaveItem.BackColor = System.Drawing.Color.Aqua;
-            this.chiNhanhBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("chiNhanhBindingNavigatorSaveItem.Image")));
-            this.chiNhanhBindingNavigatorSaveItem.Margin = new System.Windows.Forms.Padding(5);
-            this.chiNhanhBindingNavigatorSaveItem.Name = "chiNhanhBindingNavigatorSaveItem";
-            this.chiNhanhBindingNavigatorSaveItem.Size = new System.Drawing.Size(78, 20);
-            this.chiNhanhBindingNavigatorSaveItem.Text = "Save Data";
-            this.chiNhanhBindingNavigatorSaveItem.Click += new System.EventHandler(this.chiNhanhBindingNavigatorSaveItem_Click);
-            // 
             // chiNhanhGridControl
             // 
             this.chiNhanhGridControl.DataSource = this.fKNhanVienChiNhanhBindingSource;
@@ -317,16 +303,6 @@
             this.colTrangThaiXoa.Visible = true;
             this.colTrangThaiXoa.VisibleIndex = 7;
             // 
-            // toolStripButton1
-            // 
-            this.toolStripButton1.BackColor = System.Drawing.Color.Aqua;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Margin = new System.Windows.Forms.Padding(5);
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(63, 20);
-            this.toolStripButton1.Text = "Reload";
-            // 
             // ComponentNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,7 +342,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton chiNhanhBindingNavigatorSaveItem;
         private DevExpress.XtraGrid.GridControl chiNhanhGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
         private QLVT_CN_DataSetTableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
@@ -379,6 +354,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colLUONG;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
         private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
     }
 }
