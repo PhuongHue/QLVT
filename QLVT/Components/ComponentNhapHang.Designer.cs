@@ -80,13 +80,13 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.vattuComboBox = new System.Windows.Forms.ComboBox();
-            this.vattuBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.cTDDHbindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label2 = new System.Windows.Forms.Label();
+            this.vattuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.phieuNhapTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.PhieuNhapTableAdapter();
             this.cTPNTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.CTPNTableAdapter();
             this.tableAdapterManager = new QLVT.QLVT_CN_DataSetTableAdapters.TableAdapterManager();
             this.vattuTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.VattuTableAdapter();
-            this.cTDDHbindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datHangBindingSource)).BeginInit();
             this.tableLayoutPanelMain.SuspendLayout();
@@ -104,8 +104,8 @@
             this.cTPNBindingNavigator.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vattuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTDDHbindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vattuBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // qLVT_CN_DataSet
@@ -591,10 +591,11 @@
             this.vattuComboBox.TabIndex = 2;
             this.vattuComboBox.ValueMember = "MAVT";
             // 
-            // vattuBindingSource
+            // cTDDHbindingSource
             // 
-            this.vattuBindingSource.DataMember = "Vattu";
-            this.vattuBindingSource.DataSource = this.qLVT_CN_DataSet;
+            this.cTDDHbindingSource.DataMember = "FK_CTDDH_DatHang";
+            this.cTDDHbindingSource.DataSource = this.datHangBindingSource;
+            this.cTDDHbindingSource.Filter = "";
             // 
             // label2
             // 
@@ -606,6 +607,11 @@
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 2;
             this.label2.Text = "Vật tư";
+            // 
+            // vattuBindingSource
+            // 
+            this.vattuBindingSource.DataMember = "Vattu";
+            this.vattuBindingSource.DataSource = this.qLVT_CN_DataSet;
             // 
             // phieuNhapTableAdapter
             // 
@@ -633,12 +639,6 @@
             // vattuTableAdapter
             // 
             this.vattuTableAdapter.ClearBeforeFill = true;
-            // 
-            // cTDDHbindingSource
-            // 
-            this.cTDDHbindingSource.DataMember = "FK_CTDDH_DatHang";
-            this.cTDDHbindingSource.DataSource = this.datHangBindingSource;
-            this.cTDDHbindingSource.Filter = "";
             // 
             // ComponentNhapHang
             // 
@@ -671,8 +671,8 @@
             this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vattuBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTDDHbindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.vattuBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
