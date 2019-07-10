@@ -11,20 +11,23 @@ using DevExpress.XtraEditors;
 
 namespace QLVT.Components
 {
-    public partial class ComponentVT : DevExpress.XtraEditors.XtraUserControl
+    public partial class ComponentDatHang : DevExpress.XtraEditors.XtraUserControl
     {
-        public ComponentVT()
+        public ComponentDatHang()
         {
             InitializeComponent();
-
             load();
-
         }
 
         private void load()
         {
-            vattuBindingSource.DataSource = Program.QLVT_CN_DataSet;
-            vattuTableAdapter.Fill(Program.QLVT_CN_DataSet.Vattu);
+            khoBindingSource.DataSource = Program.QLVT_CN_DataSet;
         }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            ((DataRowView)datHangBindingSource.Current)["MANV"] = Program._ketNoiDB.UserName;
+        }
+
     }
 }

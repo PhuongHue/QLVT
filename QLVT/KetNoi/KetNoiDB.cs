@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLVT.BatLoi;
+using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
 using System.Linq;
@@ -62,7 +63,7 @@ namespace QLVT.KetNoi
             }
             catch (SqlException SqlE)
             {
-                return SqlE.Message;
+                return SqlMessageResolver.SqlMessageResolve(SqlE);
             }
         }
     }
