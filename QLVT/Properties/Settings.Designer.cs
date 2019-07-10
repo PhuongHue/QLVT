@@ -26,21 +26,21 @@ namespace QLVT.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-17735P0;Initial Catalog=QLVT_DATHANG;User ID=sa;Password=123")]
-        public string QLVT_DATHANG_Master_ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-17735P0\\PH_02;Initial Catalog=QLVT_DATHANG;Persist Security I" +
+            "nfo=True;User ID=sa;Password=123")]
+        public string QLVT_DATHANG_CN_ConnectionString {
             get {
-                return ((string)(this["QLVT_DATHANG_Master_ConnectionString"]));
+                return ((string)(this["QLVT_DATHANG_CN_ConnectionString"]));
             }
         }
         
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-33BKUFB\\SV_1;Initial Catalog=QLVT_DATHANG;Persist Security In" +
-            "fo=True;User ID=sa;Password=123")]
-        public string QLVT_DATHANG_CN_ConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-17735P0;Initial Catalog=QLVT_DATHANG;User ID=sa;Password=123")]
+        public string QLVT_DATHANG_Master_ConnectionString {
             get {
-                return ((string)(this["QLVT_DATHANG_CN_ConnectionString"]));
+                return ((string)(this["QLVT_DATHANG_Master_ConnectionString"]));
             }
         }
     }
