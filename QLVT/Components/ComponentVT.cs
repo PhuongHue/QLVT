@@ -11,12 +11,20 @@ using DevExpress.XtraEditors;
 
 namespace QLVT.Components
 {
-    public partial class ComponentNV : DevExpress.XtraEditors.XtraUserControl
+    public partial class ComponentVT : DevExpress.XtraEditors.XtraUserControl
     {
-        public ComponentNV()
+        public ComponentVT()
         {
             InitializeComponent();
-            chiNhanhBindingSource.DataSource = Program.QLVT_CN_DataSet;
+
+            load();
+
+        }
+
+        private void load()
+        {
+            vattuBindingSource.DataSource = Program.QLVT_CN_DataSet;
+            vattuTableAdapter.Fill(Program.QLVT_CN_DataSet.Vattu);
         }
     }
 }

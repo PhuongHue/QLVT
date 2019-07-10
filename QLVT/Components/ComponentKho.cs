@@ -11,12 +11,13 @@ using DevExpress.XtraEditors;
 
 namespace QLVT.Components
 {
-    public partial class ComponentNV : DevExpress.XtraEditors.XtraUserControl
+    public partial class ComponentKho : DevExpress.XtraEditors.XtraUserControl
     {
-        public ComponentNV()
+        public ComponentKho()
         {
             InitializeComponent();
             chiNhanhBindingSource.DataSource = Program.QLVT_CN_DataSet;
+            chiNhanhTableAdapter.Fill(Program.QLVT_CN_DataSet.ChiNhanh);
         }
     }
 }

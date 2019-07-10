@@ -54,11 +54,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BatLoi\SqlMessageResolver.cs" />
+    <Compile Include="Components\ComponentDatHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ComponentDatHang.Designer.cs">
+      <DependentUpon>ComponentDatHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ComponentNhapHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ComponentNhapHang.Designer.cs">
+      <DependentUpon>ComponentNhapHang.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\ComponentNV.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Components\ComponentNV.Designer.cs">
       <DependentUpon>ComponentNV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ComponentKho.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ComponentKho.Designer.cs">
+      <DependentUpon>ComponentKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ComponentVT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ComponentVT.Designer.cs">
+      <DependentUpon>ComponentVT.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -75,6 +100,9 @@
     <Compile Include="KetNoi\KetNoiDB.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QLVT_CN_DataSet.cs">
+      <DependentUpon>QLVT_CN_DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="QLVT_CN_DataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -85,8 +113,20 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLVT_MASTER_DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Components\ComponentDatHang.resx">
+      <DependentUpon>ComponentDatHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ComponentNhapHang.resx">
+      <DependentUpon>ComponentNhapHang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\ComponentNV.resx">
       <DependentUpon>ComponentNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ComponentKho.resx">
+      <DependentUpon>ComponentKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ComponentVT.resx">
+      <DependentUpon>ComponentVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -103,6 +143,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="app.config" />
     <None Include="Properties\Settings.settings">
@@ -136,6 +177,15 @@
     <None Include="QLVT_MASTER_DataSet.xss">
       <DependentUpon>QLVT_MASTER_DataSet.xsd</DependentUpon>
     </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icon_reload.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\save-regular.svg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

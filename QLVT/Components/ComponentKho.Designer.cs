@@ -1,6 +1,6 @@
 ﻿namespace QLVT.Components
 {
-    partial class ComponentNV
+    partial class ComponentKho
     {
         /// <summary> 
         /// Required designer variable.
@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComponentNV));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComponentKho));
             this.qLVT_CN_DataSet = new QLVT.QLVT_CN_DataSet();
             this.chiNhanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chiNhanhTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.ChiNhanhTableAdapter();
             this.tableAdapterManager = new QLVT.QLVT_CN_DataSetTableAdapters.TableAdapterManager();
-            this.nhanVienTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.NhanVienTableAdapter();
+            this.khoTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.KhoTableAdapter();
             this.chiNhanhBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.fKNhanVienChiNhanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKKhoKhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -50,19 +50,15 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.chiNhanhGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colHO = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTEN = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTENKHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colNGAYSINH = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingNavigator)).BeginInit();
             this.chiNhanhBindingNavigator.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fKNhanVienChiNhanhBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKKhoKhoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.SuspendLayout();
@@ -89,21 +85,21 @@
             this.tableAdapterManager.CTPNTableAdapter = null;
             this.tableAdapterManager.CTPXTableAdapter = null;
             this.tableAdapterManager.DatHangTableAdapter = null;
-            this.tableAdapterManager.KhoTableAdapter = null;
-            this.tableAdapterManager.NhanVienTableAdapter = this.nhanVienTableAdapter;
+            this.tableAdapterManager.KhoTableAdapter = this.khoTableAdapter;
+            this.tableAdapterManager.NhanVienTableAdapter = null;
             this.tableAdapterManager.PhieuNhapTableAdapter = null;
             this.tableAdapterManager.PhieuXuatTableAdapter = null;
             this.tableAdapterManager.UpdateOrder = QLVT.QLVT_CN_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.VattuTableAdapter = null;
             // 
-            // nhanVienTableAdapter
+            // khoTableAdapter
             // 
-            this.nhanVienTableAdapter.ClearBeforeFill = true;
+            this.khoTableAdapter.ClearBeforeFill = true;
             // 
             // chiNhanhBindingNavigator
             // 
             this.chiNhanhBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.chiNhanhBindingNavigator.BindingSource = this.fKNhanVienChiNhanhBindingSource;
+            this.chiNhanhBindingNavigator.BindingSource = this.fKKhoKhoBindingSource;
             this.chiNhanhBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.chiNhanhBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
             this.chiNhanhBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -125,7 +121,7 @@
             this.chiNhanhBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.chiNhanhBindingNavigator.Name = "chiNhanhBindingNavigator";
             this.chiNhanhBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.chiNhanhBindingNavigator.Size = new System.Drawing.Size(642, 30);
+            this.chiNhanhBindingNavigator.Size = new System.Drawing.Size(746, 30);
             this.chiNhanhBindingNavigator.TabIndex = 0;
             this.chiNhanhBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -139,10 +135,10 @@
             this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 20);
             this.bindingNavigatorAddNewItem.Text = "Add new";
             // 
-            // fKNhanVienChiNhanhBindingSource
+            // fKKhoKhoBindingSource
             // 
-            this.fKNhanVienChiNhanhBindingSource.DataMember = "FK_NhanVien_ChiNhanh";
-            this.fKNhanVienChiNhanhBindingSource.DataSource = this.chiNhanhBindingSource;
+            this.fKKhoKhoBindingSource.DataMember = "FK_Kho_Kho";
+            this.fKKhoKhoBindingSource.DataSource = this.chiNhanhBindingSource;
             // 
             // bindingNavigatorCountItem
             // 
@@ -223,12 +219,12 @@
             // 
             // chiNhanhGridControl
             // 
-            this.chiNhanhGridControl.DataSource = this.fKNhanVienChiNhanhBindingSource;
+            this.chiNhanhGridControl.DataSource = this.fKKhoKhoBindingSource;
             this.chiNhanhGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chiNhanhGridControl.Location = new System.Drawing.Point(0, 30);
             this.chiNhanhGridControl.MainView = this.gridView1;
             this.chiNhanhGridControl.Name = "chiNhanhGridControl";
-            this.chiNhanhGridControl.Size = new System.Drawing.Size(642, 424);
+            this.chiNhanhGridControl.Size = new System.Drawing.Size(746, 402);
             this.chiNhanhGridControl.TabIndex = 1;
             this.chiNhanhGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -236,87 +232,55 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMANV,
-            this.colHO,
-            this.colTEN,
+            this.colMAKHO,
+            this.colTENKHO,
             this.colDIACHI,
-            this.colNGAYSINH,
-            this.colLUONG,
-            this.colMACN,
-            this.colTrangThaiXoa});
+            this.colMACN});
             this.gridView1.GridControl = this.chiNhanhGridControl;
             this.gridView1.Name = "gridView1";
             // 
-            // colMANV
+            // colMAKHO
             // 
-            this.colMANV.FieldName = "MANV";
-            this.colMANV.Name = "colMANV";
-            this.colMANV.Visible = true;
-            this.colMANV.VisibleIndex = 0;
+            this.colMAKHO.FieldName = "MAKHO";
+            this.colMAKHO.Name = "colMAKHO";
+            this.colMAKHO.Visible = true;
+            this.colMAKHO.VisibleIndex = 0;
             // 
-            // colHO
+            // colTENKHO
             // 
-            this.colHO.FieldName = "HO";
-            this.colHO.Name = "colHO";
-            this.colHO.Visible = true;
-            this.colHO.VisibleIndex = 1;
-            // 
-            // colTEN
-            // 
-            this.colTEN.FieldName = "TEN";
-            this.colTEN.Name = "colTEN";
-            this.colTEN.Visible = true;
-            this.colTEN.VisibleIndex = 2;
+            this.colTENKHO.FieldName = "TENKHO";
+            this.colTENKHO.Name = "colTENKHO";
+            this.colTENKHO.Visible = true;
+            this.colTENKHO.VisibleIndex = 1;
             // 
             // colDIACHI
             // 
             this.colDIACHI.FieldName = "DIACHI";
             this.colDIACHI.Name = "colDIACHI";
             this.colDIACHI.Visible = true;
-            this.colDIACHI.VisibleIndex = 3;
-            // 
-            // colNGAYSINH
-            // 
-            this.colNGAYSINH.FieldName = "NGAYSINH";
-            this.colNGAYSINH.Name = "colNGAYSINH";
-            this.colNGAYSINH.Visible = true;
-            this.colNGAYSINH.VisibleIndex = 4;
-            // 
-            // colLUONG
-            // 
-            this.colLUONG.FieldName = "LUONG";
-            this.colLUONG.Name = "colLUONG";
-            this.colLUONG.Visible = true;
-            this.colLUONG.VisibleIndex = 5;
+            this.colDIACHI.VisibleIndex = 2;
             // 
             // colMACN
             // 
             this.colMACN.FieldName = "MACN";
             this.colMACN.Name = "colMACN";
             this.colMACN.Visible = true;
-            this.colMACN.VisibleIndex = 6;
+            this.colMACN.VisibleIndex = 3;
             // 
-            // colTrangThaiXoa
-            // 
-            this.colTrangThaiXoa.FieldName = "TrangThaiXoa";
-            this.colTrangThaiXoa.Name = "colTrangThaiXoa";
-            this.colTrangThaiXoa.Visible = true;
-            this.colTrangThaiXoa.VisibleIndex = 7;
-            // 
-            // ComponentNV
+            // ComponentKho
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.chiNhanhGridControl);
             this.Controls.Add(this.chiNhanhBindingNavigator);
-            this.Name = "ComponentNV";
-            this.Size = new System.Drawing.Size(642, 454);
+            this.Name = "ComponentKho";
+            this.Size = new System.Drawing.Size(746, 432);
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingNavigator)).EndInit();
             this.chiNhanhBindingNavigator.ResumeLayout(false);
             this.chiNhanhBindingNavigator.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.fKNhanVienChiNhanhBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fKKhoKhoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.ResumeLayout(false);
@@ -342,17 +306,13 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
+        private QLVT_CN_DataSetTableAdapters.KhoTableAdapter khoTableAdapter;
         private DevExpress.XtraGrid.GridControl chiNhanhGridControl;
+        private System.Windows.Forms.BindingSource fKKhoKhoBindingSource;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private QLVT_CN_DataSetTableAdapters.NhanVienTableAdapter nhanVienTableAdapter;
-        private System.Windows.Forms.BindingSource fKNhanVienChiNhanhBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colMANV;
-        private DevExpress.XtraGrid.Columns.GridColumn colHO;
-        private DevExpress.XtraGrid.Columns.GridColumn colTEN;
+        private DevExpress.XtraGrid.Columns.GridColumn colMAKHO;
+        private DevExpress.XtraGrid.Columns.GridColumn colTENKHO;
         private DevExpress.XtraGrid.Columns.GridColumn colDIACHI;
-        private DevExpress.XtraGrid.Columns.GridColumn colNGAYSINH;
-        private DevExpress.XtraGrid.Columns.GridColumn colLUONG;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
-        private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
     }
 }
