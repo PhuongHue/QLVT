@@ -29,9 +29,9 @@ namespace QLVT.Components
             ((DataRowView)datHangBindingSource.Current)["MANV"] = Program._ketNoiDB.UserName;
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+        private void btnReload_Click(object sender, EventArgs e)
         {
-            Program.updateAll();
+            Program.FillAllTable();
         }
     }
 }

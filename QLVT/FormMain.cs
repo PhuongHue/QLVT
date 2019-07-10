@@ -37,5 +37,10 @@ namespace QLVT
         {
 
         }
+
+        private void btnSaveAll_Click(object sender, EventArgs e)
+        {
+            Program.updateAll();
+        }
     }
 }

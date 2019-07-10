@@ -8,6 +8,7 @@ using DevExpress.LookAndFeel;
 using QLVT.KetNoi;
 using QLVT.QLVT_CN_DataSetTableAdapters;
 using System.Data.SqlClient;
+using QLVT.BatLoi;
 
 namespace QLVT
 {
@@ -55,7 +56,7 @@ namespace QLVT
             }
             catch (SqlException e)
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(SqlMessageResolver.SqlMessageResolve(e));
             }
         }
 

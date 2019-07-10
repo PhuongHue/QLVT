@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.tabControl = new DevExpress.XtraTab.XtraTabControl();
             this.pageNV = new DevExpress.XtraTab.XtraTabPage();
             this.componentNV1 = new QLVT.Components.ComponentNV();
@@ -50,6 +51,7 @@
             this.v_DSPMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.v_DSPMTableAdapter = new QLVT.QLVT_MASTER_DataSetTableAdapters.V_DSPMTableAdapter();
             this.v_DSPMComboBox = new System.Windows.Forms.ComboBox();
+            this.btnSaveAll = new DevExpress.XtraEditors.SimpleButton();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
             this.tabControl.SuspendLayout();
             this.pageNV.SuspendLayout();
@@ -196,6 +198,7 @@
             // tableAdapterManager
             // 
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.Connection = null;
             this.tableAdapterManager.UpdateOrder = QLVT.QLVT_MASTER_DataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // label1
@@ -229,11 +232,24 @@
             this.v_DSPMComboBox.ValueMember = "subscriber_server";
             this.v_DSPMComboBox.SelectedIndexChanged += new System.EventHandler(this.v_DSPMComboBox_SelectedIndexChanged);
             // 
+            // btnSaveAll
+            // 
+            this.btnSaveAll.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnSaveAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
+            this.btnSaveAll.ImageOptions.Location = DevExpress.XtraEditors.ImageLocation.MiddleCenter;
+            this.btnSaveAll.Location = new System.Drawing.Point(910, 12);
+            this.btnSaveAll.Name = "btnSaveAll";
+            this.btnSaveAll.Size = new System.Drawing.Size(56, 44);
+            this.btnSaveAll.TabIndex = 4;
+            this.btnSaveAll.Text = "Save";
+            this.btnSaveAll.Click += new System.EventHandler(this.btnSaveAll_Click);
+            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(978, 491);
+            this.Controls.Add(this.btnSaveAll);
             this.Controls.Add(this.v_DSPMComboBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tabControl);
@@ -281,5 +297,6 @@
         private System.Windows.Forms.BindingSource v_DSPMBindingSource;
         private QLVT_MASTER_DataSetTableAdapters.V_DSPMTableAdapter v_DSPMTableAdapter;
         private System.Windows.Forms.ComboBox v_DSPMComboBox;
+        private DevExpress.XtraEditors.SimpleButton btnSaveAll;
     }
 }

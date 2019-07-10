@@ -46,56 +46,55 @@
             this.datHangTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.DatHangTableAdapter();
             this.tableAdapterManager = new QLVT.QLVT_CN_DataSetTableAdapters.TableAdapterManager();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.datHangBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.btnSave = new System.Windows.Forms.ToolStripButton();
             this.btnReload = new System.Windows.Forms.ToolStripButton();
-            this.datHangBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.cTDDHBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cTDDHTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.CTDDHTableAdapter();
-            this.cTDDHGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.cTDHBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
+            this.cTDDHBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
+            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorPositionItem1 = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorMoveNextItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
+            this.cTDDHGridControl = new DevExpress.XtraGrid.GridControl();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAVT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDONGIA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.cTDDHTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.CTDDHTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datHangBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datHangGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datHangBindingNavigator)).BeginInit();
             this.datHangBindingNavigator.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cTDHBindingNavigator)).BeginInit();
+            this.cTDHBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cTDDHBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTDDHGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cTDHBindingNavigator)).BeginInit();
-            this.cTDHBindingNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // qLVT_CN_DataSet
@@ -240,6 +239,76 @@
             this.tableLayoutPanel1.Size = new System.Drawing.Size(826, 410);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
+            // panel1
+            // 
+            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel1.Controls.Add(this.datHangBindingNavigator);
+            this.panel1.Controls.Add(this.datHangGridControl);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(407, 404);
+            this.panel1.TabIndex = 3;
+            // 
+            // datHangBindingNavigator
+            // 
+            this.datHangBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.datHangBindingNavigator.BindingSource = this.datHangBindingSource;
+            this.datHangBindingNavigator.CountItem = this.bindingNavigatorCountItem;
+            this.datHangBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.datHangBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.bindingNavigatorMoveFirstItem,
+            this.bindingNavigatorMovePreviousItem,
+            this.bindingNavigatorSeparator,
+            this.bindingNavigatorPositionItem,
+            this.bindingNavigatorCountItem,
+            this.bindingNavigatorSeparator1,
+            this.bindingNavigatorMoveNextItem,
+            this.bindingNavigatorMoveLastItem,
+            this.bindingNavigatorSeparator2,
+            this.bindingNavigatorAddNewItem,
+            this.bindingNavigatorDeleteItem,
+            this.btnReload});
+            this.datHangBindingNavigator.Location = new System.Drawing.Point(0, 0);
+            this.datHangBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
+            this.datHangBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
+            this.datHangBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
+            this.datHangBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
+            this.datHangBindingNavigator.Name = "datHangBindingNavigator";
+            this.datHangBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
+            this.datHangBindingNavigator.Size = new System.Drawing.Size(407, 30);
+            this.datHangBindingNavigator.TabIndex = 1;
+            this.datHangBindingNavigator.Text = "bindingNavigator1";
+            // 
+            // bindingNavigatorAddNewItem
+            // 
+            this.bindingNavigatorAddNewItem.BackColor = System.Drawing.Color.Aqua;
+            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
+            this.bindingNavigatorAddNewItem.Margin = new System.Windows.Forms.Padding(5);
+            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
+            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 20);
+            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            // 
+            // bindingNavigatorCountItem
+            // 
+            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
+            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 27);
+            this.bindingNavigatorCountItem.Text = "of {0}";
+            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem
+            // 
+            this.bindingNavigatorDeleteItem.BackColor = System.Drawing.Color.Aqua;
+            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
+            this.bindingNavigatorDeleteItem.Margin = new System.Windows.Forms.Padding(5);
+            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
+            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(60, 20);
+            this.bindingNavigatorDeleteItem.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem
             // 
             this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -272,13 +341,6 @@
             this.bindingNavigatorPositionItem.Text = "0";
             this.bindingNavigatorPositionItem.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(35, 27);
-            this.bindingNavigatorCountItem.Text = "of {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator1
             // 
             this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator1";
@@ -307,38 +369,6 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 20);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(60, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
-            // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.Aqua;
-            this.btnSave.Image = ((System.Drawing.Image)(resources.GetObject("btnSave.Image")));
-            this.btnSave.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnSave.Margin = new System.Windows.Forms.Padding(5);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(51, 20);
-            this.btnSave.Text = "Save";
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // btnReload
             // 
             this.btnReload.BackColor = System.Drawing.Color.Aqua;
@@ -348,49 +378,7 @@
             this.btnReload.Name = "btnReload";
             this.btnReload.Size = new System.Drawing.Size(63, 20);
             this.btnReload.Text = "Reload";
-            // 
-            // datHangBindingNavigator
-            // 
-            this.datHangBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.datHangBindingNavigator.BindingSource = this.datHangBindingSource;
-            this.datHangBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.datHangBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.datHangBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.btnSave,
-            this.btnReload});
-            this.datHangBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.datHangBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.datHangBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.datHangBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.datHangBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.datHangBindingNavigator.Name = "datHangBindingNavigator";
-            this.datHangBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.datHangBindingNavigator.Size = new System.Drawing.Size(407, 30);
-            this.datHangBindingNavigator.TabIndex = 1;
-            this.datHangBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.Controls.Add(this.datHangBindingNavigator);
-            this.panel1.Controls.Add(this.datHangGridControl);
-            this.panel1.Location = new System.Drawing.Point(3, 3);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(407, 404);
-            this.panel1.TabIndex = 3;
+            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
             // panel2
             // 
@@ -404,38 +392,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(407, 404);
             this.panel2.TabIndex = 4;
-            // 
-            // cTDDHBindingSource
-            // 
-            this.cTDDHBindingSource.DataMember = "FK_CTDDH_DatHang";
-            this.cTDDHBindingSource.DataSource = this.datHangBindingSource;
-            // 
-            // cTDDHTableAdapter
-            // 
-            this.cTDDHTableAdapter.ClearBeforeFill = true;
-            // 
-            // cTDDHGridControl
-            // 
-            this.cTDDHGridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.cTDDHGridControl.DataSource = this.cTDDHBindingSource;
-            this.cTDDHGridControl.Location = new System.Drawing.Point(3, 33);
-            this.cTDDHGridControl.MainView = this.gridView2;
-            this.cTDDHGridControl.Name = "cTDDHGridControl";
-            this.cTDDHGridControl.Size = new System.Drawing.Size(401, 368);
-            this.cTDDHGridControl.TabIndex = 0;
-            this.cTDDHGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
-            // 
-            // gridView2
-            // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colMAVT,
-            this.colSOLUONG,
-            this.colDONGIA});
-            this.gridView2.GridControl = this.cTDDHGridControl;
-            this.gridView2.Name = "gridView2";
             // 
             // cTDHBindingNavigator
             // 
@@ -466,11 +422,43 @@
             this.cTDHBindingNavigator.TabIndex = 1;
             this.cTDHBindingNavigator.Text = "bindingNavigator1";
             // 
+            // bindingNavigatorAddNewItem1
+            // 
+            this.bindingNavigatorAddNewItem1.BackColor = System.Drawing.Color.Aqua;
+            this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
+            this.bindingNavigatorAddNewItem1.Margin = new System.Windows.Forms.Padding(5);
+            this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem1";
+            this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(74, 20);
+            this.bindingNavigatorAddNewItem1.Text = "Add new";
+            // 
+            // cTDDHBindingSource
+            // 
+            this.cTDDHBindingSource.DataMember = "FK_CTDDH_DatHang";
+            this.cTDDHBindingSource.DataSource = this.datHangBindingSource;
+            // 
+            // bindingNavigatorCountItem1
+            // 
+            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem1";
+            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 27);
+            this.bindingNavigatorCountItem1.Text = "of {0}";
+            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
+            // 
+            // bindingNavigatorDeleteItem1
+            // 
+            this.bindingNavigatorDeleteItem1.BackColor = System.Drawing.Color.Aqua;
+            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
+            this.bindingNavigatorDeleteItem1.Margin = new System.Windows.Forms.Padding(5);
+            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
+            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
+            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(60, 20);
+            this.bindingNavigatorDeleteItem1.Text = "Delete";
+            // 
             // bindingNavigatorMoveFirstItem1
             // 
             this.bindingNavigatorMoveFirstItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveFirstItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem1.Image")));
-            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem";
+            this.bindingNavigatorMoveFirstItem1.Name = "bindingNavigatorMoveFirstItem1";
             this.bindingNavigatorMoveFirstItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveFirstItem1.Size = new System.Drawing.Size(23, 27);
             this.bindingNavigatorMoveFirstItem1.Text = "Move first";
@@ -479,42 +467,35 @@
             // 
             this.bindingNavigatorMovePreviousItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMovePreviousItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem1.Image")));
-            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem";
+            this.bindingNavigatorMovePreviousItem1.Name = "bindingNavigatorMovePreviousItem1";
             this.bindingNavigatorMovePreviousItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMovePreviousItem1.Size = new System.Drawing.Size(23, 27);
             this.bindingNavigatorMovePreviousItem1.Text = "Move previous";
             // 
             // bindingNavigatorSeparator3
             // 
-            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator3.Name = "bindingNavigatorSeparator3";
             this.bindingNavigatorSeparator3.Size = new System.Drawing.Size(6, 30);
             // 
             // bindingNavigatorPositionItem1
             // 
             this.bindingNavigatorPositionItem1.AccessibleName = "Position";
             this.bindingNavigatorPositionItem1.AutoSize = false;
-            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem";
+            this.bindingNavigatorPositionItem1.Name = "bindingNavigatorPositionItem1";
             this.bindingNavigatorPositionItem1.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem1.Text = "0";
             this.bindingNavigatorPositionItem1.ToolTipText = "Current position";
             // 
-            // bindingNavigatorCountItem1
-            // 
-            this.bindingNavigatorCountItem1.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem1.Size = new System.Drawing.Size(35, 27);
-            this.bindingNavigatorCountItem1.Text = "of {0}";
-            this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
-            // 
             // bindingNavigatorSeparator4
             // 
-            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator4.Name = "bindingNavigatorSeparator4";
             this.bindingNavigatorSeparator4.Size = new System.Drawing.Size(6, 30);
             // 
             // bindingNavigatorMoveNextItem1
             // 
             this.bindingNavigatorMoveNextItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveNextItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem1.Image")));
-            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem";
+            this.bindingNavigatorMoveNextItem1.Name = "bindingNavigatorMoveNextItem1";
             this.bindingNavigatorMoveNextItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveNextItem1.Size = new System.Drawing.Size(23, 27);
             this.bindingNavigatorMoveNextItem1.Text = "Move next";
@@ -523,35 +504,38 @@
             // 
             this.bindingNavigatorMoveLastItem1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
             this.bindingNavigatorMoveLastItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem1.Image")));
-            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem";
+            this.bindingNavigatorMoveLastItem1.Name = "bindingNavigatorMoveLastItem1";
             this.bindingNavigatorMoveLastItem1.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorMoveLastItem1.Size = new System.Drawing.Size(23, 27);
             this.bindingNavigatorMoveLastItem1.Text = "Move last";
             // 
             // bindingNavigatorSeparator5
             // 
-            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator";
+            this.bindingNavigatorSeparator5.Name = "bindingNavigatorSeparator5";
             this.bindingNavigatorSeparator5.Size = new System.Drawing.Size(6, 30);
             // 
-            // bindingNavigatorAddNewItem1
+            // cTDDHGridControl
             // 
-            this.bindingNavigatorAddNewItem1.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
-            this.bindingNavigatorAddNewItem1.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(74, 20);
-            this.bindingNavigatorAddNewItem1.Text = "Add new";
+            this.cTDDHGridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.cTDDHGridControl.DataSource = this.cTDDHBindingSource;
+            this.cTDDHGridControl.Location = new System.Drawing.Point(3, 33);
+            this.cTDDHGridControl.MainView = this.gridView2;
+            this.cTDDHGridControl.Name = "cTDDHGridControl";
+            this.cTDDHGridControl.Size = new System.Drawing.Size(401, 368);
+            this.cTDDHGridControl.TabIndex = 0;
+            this.cTDDHGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView2});
             // 
-            // bindingNavigatorDeleteItem1
+            // gridView2
             // 
-            this.bindingNavigatorDeleteItem1.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
-            this.bindingNavigatorDeleteItem1.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(60, 20);
-            this.bindingNavigatorDeleteItem1.Text = "Delete";
+            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMAVT,
+            this.colSOLUONG,
+            this.colDONGIA});
+            this.gridView2.GridControl = this.cTDDHGridControl;
+            this.gridView2.Name = "gridView2";
             // 
             // colMAVT
             // 
@@ -577,6 +561,10 @@
             this.colDONGIA.Visible = true;
             this.colDONGIA.VisibleIndex = 2;
             // 
+            // cTDDHTableAdapter
+            // 
+            this.cTDDHTableAdapter.ClearBeforeFill = true;
+            // 
             // ComponentDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -592,19 +580,19 @@
             ((System.ComponentModel.ISupportInitialize)(this.datHangGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.datHangBindingNavigator)).EndInit();
             this.datHangBindingNavigator.ResumeLayout(false);
             this.datHangBindingNavigator.PerformLayout();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.cTDDHBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cTDDHGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTDHBindingNavigator)).EndInit();
             this.cTDHBindingNavigator.ResumeLayout(false);
             this.cTDHBindingNavigator.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cTDDHBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cTDDHGridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -641,7 +629,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton btnSave;
         private System.Windows.Forms.ToolStripButton btnReload;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraGrid.GridControl cTDDHGridControl;
