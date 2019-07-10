@@ -85,6 +85,12 @@
     <Compile Include="Components\ComponentVT.Designer.cs">
       <DependentUpon>ComponentVT.cs</DependentUpon>
     </Compile>
+    <Compile Include="Components\ComponentXH.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ComponentXH.Designer.cs">
+      <DependentUpon>ComponentXH.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ComponentVT.resx">
       <DependentUpon>ComponentVT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ComponentXH.resx">
+      <DependentUpon>ComponentXH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
