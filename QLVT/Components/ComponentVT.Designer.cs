@@ -34,7 +34,7 @@
             this.vattuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vattuTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.VattuTableAdapter();
             this.vattuBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.btnAddNewVT = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -46,13 +46,13 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.vattuGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewVatTu = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vattuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vattuBindingNavigator)).BeginInit();
             this.vattuBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vattuGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewVatTu)).BeginInit();
             this.SuspendLayout();
             // 
             // qLVT_CN_DataSet
@@ -71,7 +71,7 @@
             // 
             // vattuBindingNavigator
             // 
-            this.vattuBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.vattuBindingNavigator.AddNewItem = this.btnAddNewVT;
             this.vattuBindingNavigator.BindingSource = this.vattuBindingSource;
             this.vattuBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.vattuBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -85,7 +85,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
+            this.btnAddNewVT,
             this.bindingNavigatorDeleteItem});
             this.vattuBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.vattuBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -98,15 +98,16 @@
             this.vattuBindingNavigator.TabIndex = 0;
             this.vattuBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
+            // btnAddNewVT
             // 
-            this.bindingNavigatorAddNewItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 20);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.btnAddNewVT.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.btnAddNewVT.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewVT.Image")));
+            this.btnAddNewVT.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddNewVT.Name = "btnAddNewVT";
+            this.btnAddNewVT.RightToLeftAutoMirrorImage = true;
+            this.btnAddNewVT.Size = new System.Drawing.Size(74, 20);
+            this.btnAddNewVT.Text = "Add new";
+            this.btnAddNewVT.Click += new System.EventHandler(this.btnAddNewVT_Click);
             // 
             // bindingNavigatorCountItem
             // 
@@ -190,17 +191,19 @@
             this.vattuGridControl.DataSource = this.vattuBindingSource;
             this.vattuGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.vattuGridControl.Location = new System.Drawing.Point(0, 30);
-            this.vattuGridControl.MainView = this.gridView1;
+            this.vattuGridControl.MainView = this.gridViewVatTu;
             this.vattuGridControl.Name = "vattuGridControl";
             this.vattuGridControl.Size = new System.Drawing.Size(698, 379);
             this.vattuGridControl.TabIndex = 1;
             this.vattuGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridViewVatTu});
             // 
-            // gridView1
+            // gridViewVatTu
             // 
-            this.gridView1.GridControl = this.vattuGridControl;
-            this.gridView1.Name = "gridView1";
+            this.gridViewVatTu.GridControl = this.vattuGridControl;
+            this.gridViewVatTu.Name = "gridViewVatTu";
+            this.gridViewVatTu.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewVatTu_FocusedRowChanged);
+            this.gridViewVatTu.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewVatTu_RowUpdated);
             // 
             // ComponentVT
             // 
@@ -219,7 +222,7 @@
             this.vattuBindingNavigator.ResumeLayout(false);
             this.vattuBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vattuGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewVatTu)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,7 +234,7 @@
         private System.Windows.Forms.BindingSource vattuBindingSource;
         private QLVT_CN_DataSetTableAdapters.VattuTableAdapter vattuTableAdapter;
         private System.Windows.Forms.BindingNavigator vattuBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton btnAddNewVT;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -243,6 +246,6 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private DevExpress.XtraGrid.GridControl vattuGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewVatTu;
     }
 }

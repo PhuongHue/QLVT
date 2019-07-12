@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QLVT.BatLoi;
 
 namespace QLVT.Components
 {
@@ -24,26 +25,40 @@ namespace QLVT.Components
             datHangBindingSource.DataSource = Program.QLVT_CN_DataSet;
             vattuBindingSource.DataSource = Program.QLVT_CN_DataSet;
         }
-        
-        private void pNBindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+
+        private void addNewPhieuNhap_Click(object sender, EventArgs e)
         {
+            btnAddNewPhieuNhap.Enabled = false;
             ((DataRowView)phieuNhapBindingSource.Current)["MANV"] = Program._ketNoiDB.UserName;
             ((DataRowView)phieuNhapBindingSource.Current)["MAKHO"]
                 = ((DataRowView)datHangBindingSource.Current)["MAKHO"];
         }
 
-        private void cTPNBindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        private void gridViewDatHang_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
+            btnAddNewPhieuNhap.Enabled = true;
+        }
+
+        private void gridViewDatHang_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            btnAddNewPhieuNhap.Enabled = true;
+        }
+
+        private void addNewCTPN_Click(object sender, EventArgs e)
+        {
+            btnAddNewCTPN.Enabled = false;
             ((DataRowView)cTPNBindingSource.Current)["MAVT"]
                 = ((DataRowView)cTDDHbindingSource.Current)["MAVT"];
         }
 
-        private void gridView2_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        private void gridViewPhieuNhap_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
-            if(e.Column.FieldName == "SOLUONG")
-            {
+            btnAddNewCTPN.Enabled = true;
+        }
 
-            }
+        private void gridViewPhieuNhap_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            btnAddNewCTPN.Enabled = true;
         }
     }
 }

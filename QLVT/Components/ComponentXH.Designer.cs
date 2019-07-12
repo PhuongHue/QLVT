@@ -28,17 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComponentXH));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.khoComboBox = new System.Windows.Forms.ComboBox();
-            this.khoBindingSource = new System.Windows.Forms.BindingSource();
+            this.khoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.qLVT_CN_DataSet = new QLVT.QLVT_CN_DataSet();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.phieuXuatBindingNavigator = new System.Windows.Forms.BindingNavigator();
+            this.phieuXuatBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.phieuXuatNewItem = new System.Windows.Forms.ToolStripButton();
-            this.phieuXuatBindingSource = new System.Windows.Forms.BindingSource();
+            this.phieuXuatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -50,16 +51,16 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.phieuXuatGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewPX = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAPX = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNGAY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colHOTENKH = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.cTPXBindingNavigator = new System.Windows.Forms.BindingNavigator();
+            this.cTPXBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.cTPXNewItem = new System.Windows.Forms.ToolStripButton();
-            this.cTPXBindingSource = new System.Windows.Forms.BindingSource();
+            this.cTPXBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
@@ -71,7 +72,7 @@
             this.bindingNavigatorMoveLastItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.cTPXGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewCTPX = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAPX1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAVT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,7 +80,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.vattuComboBox = new System.Windows.Forms.ComboBox();
-            this.vattuBindingSource = new System.Windows.Forms.BindingSource();
+            this.vattuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.khoTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.KhoTableAdapter();
             this.vattuTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.VattuTableAdapter();
             this.phieuXuatTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.PhieuXuatTableAdapter();
@@ -93,13 +94,13 @@
             this.phieuXuatBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phieuXuatBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuXuatGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPX)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cTPXBindingNavigator)).BeginInit();
             this.cTPXBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cTPXBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPXGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCTPX)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vattuBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -178,9 +179,10 @@
             this.panel2.AutoScroll = true;
             this.panel2.Controls.Add(this.phieuXuatBindingNavigator);
             this.panel2.Controls.Add(this.phieuXuatGridControl);
-            this.panel2.Location = new System.Drawing.Point(3, 38);
+            this.panel2.Location = new System.Drawing.Point(0, 35);
+            this.panel2.Margin = new System.Windows.Forms.Padding(0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(463, 624);
+            this.panel2.Size = new System.Drawing.Size(469, 630);
             this.panel2.TabIndex = 2;
             // 
             // phieuXuatBindingNavigator
@@ -208,7 +210,7 @@
             this.phieuXuatBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.phieuXuatBindingNavigator.Name = "phieuXuatBindingNavigator";
             this.phieuXuatBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.phieuXuatBindingNavigator.Size = new System.Drawing.Size(463, 30);
+            this.phieuXuatBindingNavigator.Size = new System.Drawing.Size(469, 30);
             this.phieuXuatBindingNavigator.TabIndex = 1;
             this.phieuXuatBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -312,23 +314,25 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.phieuXuatGridControl.DataSource = this.phieuXuatBindingSource;
             this.phieuXuatGridControl.Location = new System.Drawing.Point(3, 28);
-            this.phieuXuatGridControl.MainView = this.gridView1;
+            this.phieuXuatGridControl.MainView = this.gridViewPX;
             this.phieuXuatGridControl.Name = "phieuXuatGridControl";
-            this.phieuXuatGridControl.Size = new System.Drawing.Size(457, 593);
+            this.phieuXuatGridControl.Size = new System.Drawing.Size(463, 599);
             this.phieuXuatGridControl.TabIndex = 0;
             this.phieuXuatGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridViewPX});
             // 
-            // gridView1
+            // gridViewPX
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewPX.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMAPX,
             this.colNGAY,
             this.colHOTENKH,
             this.colMANV,
             this.colMAKHO});
-            this.gridView1.GridControl = this.phieuXuatGridControl;
-            this.gridView1.Name = "gridView1";
+            this.gridViewPX.GridControl = this.phieuXuatGridControl;
+            this.gridViewPX.Name = "gridViewPX";
+            this.gridViewPX.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewPX_FocusedRowChanged);
+            this.gridViewPX.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewPX_RowUpdated);
             // 
             // colMAPX
             // 
@@ -372,9 +376,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.Controls.Add(this.cTPXBindingNavigator);
             this.panel4.Controls.Add(this.cTPXGridControl);
-            this.panel4.Location = new System.Drawing.Point(472, 38);
+            this.panel4.Location = new System.Drawing.Point(469, 35);
+            this.panel4.Margin = new System.Windows.Forms.Padding(0);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(463, 624);
+            this.panel4.Size = new System.Drawing.Size(469, 630);
             this.panel4.TabIndex = 4;
             // 
             // cTPXBindingNavigator
@@ -402,7 +407,7 @@
             this.cTPXBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem1;
             this.cTPXBindingNavigator.Name = "cTPXBindingNavigator";
             this.cTPXBindingNavigator.PositionItem = this.bindingNavigatorPositionItem1;
-            this.cTPXBindingNavigator.Size = new System.Drawing.Size(463, 30);
+            this.cTPXBindingNavigator.Size = new System.Drawing.Size(469, 30);
             this.cTPXBindingNavigator.TabIndex = 1;
             this.cTPXBindingNavigator.Text = "bindingNavigator2";
             // 
@@ -506,22 +511,24 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cTPXGridControl.DataSource = this.cTPXBindingSource;
             this.cTPXGridControl.Location = new System.Drawing.Point(3, 28);
-            this.cTPXGridControl.MainView = this.gridView2;
+            this.cTPXGridControl.MainView = this.gridViewCTPX;
             this.cTPXGridControl.Name = "cTPXGridControl";
-            this.cTPXGridControl.Size = new System.Drawing.Size(457, 596);
+            this.cTPXGridControl.Size = new System.Drawing.Size(463, 602);
             this.cTPXGridControl.TabIndex = 0;
             this.cTPXGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.gridViewCTPX});
             // 
-            // gridView2
+            // gridViewCTPX
             // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewCTPX.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMAPX1,
             this.colMAVT,
             this.colSOLUONG,
             this.colDONGIA});
-            this.gridView2.GridControl = this.cTPXGridControl;
-            this.gridView2.Name = "gridView2";
+            this.gridViewCTPX.GridControl = this.cTPXGridControl;
+            this.gridViewCTPX.Name = "gridViewCTPX";
+            this.gridViewCTPX.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewCTPX_FocusedRowChanged);
+            this.gridViewCTPX.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewCTPX_RowUpdated);
             // 
             // colMAPX1
             // 
@@ -628,7 +635,7 @@
             this.phieuXuatBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phieuXuatBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuXuatGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPX)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cTPXBindingNavigator)).EndInit();
@@ -636,7 +643,7 @@
             this.cTPXBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cTPXBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPXGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewCTPX)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.vattuBindingSource)).EndInit();
@@ -667,7 +674,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private DevExpress.XtraGrid.GridControl phieuXuatGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewPX;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.ComboBox vattuComboBox;
         private System.Windows.Forms.BindingSource vattuBindingSource;
@@ -688,7 +695,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator5;
         private DevExpress.XtraGrid.GridControl cTPXGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewCTPX;
         private QLVT_CN_DataSetTableAdapters.CTPXTableAdapter cTPXTableAdapter;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

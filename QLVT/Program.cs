@@ -49,7 +49,7 @@ namespace QLVT
             }
             catch (SqlException e)
             {
-                MessageBox.Show(SqlMessageResolver.SqlMessageResolve(e));
+                MessageBox.Show(SqlMessageResolver.SqlMessageResolve(e.Message));
             }
 
         }
@@ -62,7 +62,8 @@ namespace QLVT
             }
             catch (SqlException e)
             {
-                MessageBox.Show(SqlMessageResolver.SqlMessageResolve(e));
+                MessageBox.Show(e.Message);
+                MessageBox.Show(SqlMessageResolver.SqlMessageResolve(e.Message));
             }
             catch (ArgumentException e)
             {
@@ -134,3 +135,4 @@ namespace QLVT
         }
     }
 }
+

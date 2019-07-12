@@ -15,6 +15,7 @@ namespace QLVT.BatLoi
             "FOREIGN KEY",
             "CHECK",
             "QUA SO LUONG",
+            "NULL",
             "Login failed"
         };
 
@@ -24,23 +25,24 @@ namespace QLVT.BatLoi
             "Lỗi vi phạm rằng buộc khóa ngoại ",
             "Lỗi vi phạm rằng buộc dữ liệu ",
             "Lỗi quá số lượng ",
+            "Lỗi vi phạm rằng buộc không được rỗng ",
             "Đăng nhập thất bại"
         };
-        public static string SqlMessageResolve(SqlException e)
+        public static string SqlMessageResolve(string Message)
         {
             string errorType = "";
             string column = "";
             foreach(string error in ErrorCodeDetecter){
-                if (e.Message.Contains(error))
+                if (Message.Contains(error))
                     errorType += ErrorCodeResolver[ErrorCodeDetecter.IndexOf(error)];
             }
-            if (e.Message.Contains("column"))
+            if (Message.Contains("column"))
             {
                 column += "tại cột ";
-                int index = e.Message.IndexOf("column") + 7;
-                while (e.Message[index] !='.')
+                int index = Message.IndexOf("column") + 8;
+                while (Message[index] !='\'')
                 {
-                    column += e.Message[index];
+                    column += Message[index];
                     index++;
                 }
             }

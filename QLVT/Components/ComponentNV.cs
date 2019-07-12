@@ -18,5 +18,20 @@ namespace QLVT.Components
             InitializeComponent();
             chiNhanhBindingSource.DataSource = Program.QLVT_CN_DataSet;
         }
+
+        private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
+        {
+            bindingNavigatorAddNewItem.Enabled = false;
+        }
+
+        private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
+        {
+            bindingNavigatorAddNewItem.Enabled = true;
+        }
+        
+        private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
+        {
+            bindingNavigatorAddNewItem.Enabled = true;
+        }
     }
 }

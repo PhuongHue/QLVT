@@ -61,9 +61,9 @@ namespace QLVT.KetNoi
                 this.Ready = true;
                 return "Kết nối thành công!";
             }
-            catch (SqlException SqlE)
+            catch (SqlException e)
             {
-                return SqlMessageResolver.SqlMessageResolve(SqlE);
+                return SqlMessageResolver.SqlMessageResolve(e.Message);
             }
         }
     }

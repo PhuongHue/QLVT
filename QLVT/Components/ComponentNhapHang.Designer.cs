@@ -38,7 +38,7 @@
             this.tableLayoutPanelMain = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.phieuNhapBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.btnAddNewPhieuNhap = new System.Windows.Forms.ToolStripButton();
             this.phieuNhapBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -51,7 +51,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.phieuNhapGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewDatHang = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAPN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colNGAY = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMasoDDH = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,13 +60,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.cTPNGridControl = new DevExpress.XtraGrid.GridControl();
             this.cTPNBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewPhieuNhap = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAPN1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMAVT = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSOLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDONGIA = new DevExpress.XtraGrid.Columns.GridColumn();
             this.cTPNBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem1 = new System.Windows.Forms.ToolStripButton();
+            this.btnAddNewCTPN = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
@@ -95,11 +95,11 @@
             this.phieuNhapBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phieuNhapBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuNhapGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewDatHang)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cTPNGridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPNBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPhieuNhap)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPNBindingNavigator)).BeginInit();
             this.cTPNBindingNavigator.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -111,6 +111,7 @@
             // qLVT_CN_DataSet
             // 
             this.qLVT_CN_DataSet.DataSetName = "QLVT_CN_DataSet";
+            this.qLVT_CN_DataSet.EnforceConstraints = false;
             this.qLVT_CN_DataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // datHangBindingSource
@@ -127,7 +128,7 @@
             this.datHangComboBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.datHangComboBox.DataSource = this.datHangBindingSource;
-            this.datHangComboBox.DisplayMember = "NhaCC";
+            this.datHangComboBox.DisplayMember = "MasoDDH";
             this.datHangComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.datHangComboBox.FormattingEnabled = true;
             this.datHangComboBox.Location = new System.Drawing.Point(92, 3);
@@ -178,7 +179,7 @@
             // 
             // phieuNhapBindingNavigator
             // 
-            this.phieuNhapBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.phieuNhapBindingNavigator.AddNewItem = this.btnAddNewPhieuNhap;
             this.phieuNhapBindingNavigator.BindingSource = this.phieuNhapBindingSource;
             this.phieuNhapBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.phieuNhapBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -192,7 +193,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
+            this.btnAddNewPhieuNhap,
             this.bindingNavigatorDeleteItem});
             this.phieuNhapBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.phieuNhapBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -205,16 +206,16 @@
             this.phieuNhapBindingNavigator.TabIndex = 1;
             this.phieuNhapBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
+            // btnAddNewPhieuNhap
             // 
-            this.bindingNavigatorAddNewItem.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 20);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.pNBindingNavigatorAddNewItem_Click);
+            this.btnAddNewPhieuNhap.BackColor = System.Drawing.Color.Aqua;
+            this.btnAddNewPhieuNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewPhieuNhap.Image")));
+            this.btnAddNewPhieuNhap.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddNewPhieuNhap.Name = "btnAddNewPhieuNhap";
+            this.btnAddNewPhieuNhap.RightToLeftAutoMirrorImage = true;
+            this.btnAddNewPhieuNhap.Size = new System.Drawing.Size(74, 20);
+            this.btnAddNewPhieuNhap.Text = "Add new";
+            this.btnAddNewPhieuNhap.Click += new System.EventHandler(this.addNewPhieuNhap_Click);
             // 
             // phieuNhapBindingSource
             // 
@@ -305,23 +306,25 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.phieuNhapGridControl.DataSource = this.phieuNhapBindingSource;
             this.phieuNhapGridControl.Location = new System.Drawing.Point(3, 33);
-            this.phieuNhapGridControl.MainView = this.gridView1;
+            this.phieuNhapGridControl.MainView = this.gridViewDatHang;
             this.phieuNhapGridControl.Name = "phieuNhapGridControl";
             this.phieuNhapGridControl.Size = new System.Drawing.Size(399, 424);
             this.phieuNhapGridControl.TabIndex = 0;
             this.phieuNhapGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridViewDatHang});
             // 
-            // gridView1
+            // gridViewDatHang
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewDatHang.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMAPN,
             this.colNGAY,
             this.colMasoDDH,
             this.colMANV,
             this.colMAKHO});
-            this.gridView1.GridControl = this.phieuNhapGridControl;
-            this.gridView1.Name = "gridView1";
+            this.gridViewDatHang.GridControl = this.phieuNhapGridControl;
+            this.gridViewDatHang.Name = "gridViewDatHang";
+            this.gridViewDatHang.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewDatHang_FocusedRowChanged);
+            this.gridViewDatHang.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewDatHang_RowUpdated);
             // 
             // colMAPN
             // 
@@ -383,28 +386,29 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.cTPNGridControl.DataSource = this.cTPNBindingSource;
             this.cTPNGridControl.Location = new System.Drawing.Point(3, 33);
-            this.cTPNGridControl.MainView = this.gridView2;
+            this.cTPNGridControl.MainView = this.gridViewPhieuNhap;
             this.cTPNGridControl.Name = "cTPNGridControl";
             this.cTPNGridControl.Size = new System.Drawing.Size(399, 424);
             this.cTPNGridControl.TabIndex = 1;
             this.cTPNGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.gridViewPhieuNhap});
             // 
             // cTPNBindingSource
             // 
             this.cTPNBindingSource.DataMember = "FK_CTPN_PhieuNhap";
             this.cTPNBindingSource.DataSource = this.phieuNhapBindingSource;
             // 
-            // gridView2
+            // gridViewPhieuNhap
             // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewPhieuNhap.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMAPN1,
             this.colMAVT,
             this.colSOLUONG,
             this.colDONGIA});
-            this.gridView2.GridControl = this.cTPNGridControl;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridView2_CellValueChanged);
+            this.gridViewPhieuNhap.GridControl = this.cTPNGridControl;
+            this.gridViewPhieuNhap.Name = "gridViewPhieuNhap";
+            this.gridViewPhieuNhap.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewPhieuNhap_FocusedRowChanged);
+            this.gridViewPhieuNhap.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewPhieuNhap_RowUpdated);
             // 
             // colMAPN1
             // 
@@ -419,6 +423,7 @@
             this.colMAVT.Caption = "Mã vật tư";
             this.colMAVT.FieldName = "MAVT";
             this.colMAVT.Name = "colMAVT";
+            this.colMAVT.OptionsColumn.AllowEdit = false;
             this.colMAVT.Visible = true;
             this.colMAVT.VisibleIndex = 1;
             // 
@@ -440,7 +445,7 @@
             // 
             // cTPNBindingNavigator
             // 
-            this.cTPNBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem1;
+            this.cTPNBindingNavigator.AddNewItem = this.btnAddNewCTPN;
             this.cTPNBindingNavigator.BindingSource = this.cTPNBindingSource;
             this.cTPNBindingNavigator.CountItem = this.bindingNavigatorCountItem1;
             this.cTPNBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem1;
@@ -454,7 +459,7 @@
             this.bindingNavigatorMoveNextItem1,
             this.bindingNavigatorMoveLastItem1,
             this.bindingNavigatorSeparator5,
-            this.bindingNavigatorAddNewItem1,
+            this.btnAddNewCTPN,
             this.bindingNavigatorDeleteItem1});
             this.cTPNBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.cTPNBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
@@ -467,16 +472,16 @@
             this.cTPNBindingNavigator.TabIndex = 0;
             this.cTPNBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem1
+            // btnAddNewCTPN
             // 
-            this.bindingNavigatorAddNewItem1.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorAddNewItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem1.Image")));
-            this.bindingNavigatorAddNewItem1.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorAddNewItem1.Name = "bindingNavigatorAddNewItem1";
-            this.bindingNavigatorAddNewItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem1.Size = new System.Drawing.Size(74, 20);
-            this.bindingNavigatorAddNewItem1.Text = "Add new";
-            this.bindingNavigatorAddNewItem1.Click += new System.EventHandler(this.cTPNBindingNavigatorAddNewItem_Click);
+            this.btnAddNewCTPN.BackColor = System.Drawing.Color.Aqua;
+            this.btnAddNewCTPN.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewCTPN.Image")));
+            this.btnAddNewCTPN.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddNewCTPN.Name = "btnAddNewCTPN";
+            this.btnAddNewCTPN.RightToLeftAutoMirrorImage = true;
+            this.btnAddNewCTPN.Size = new System.Drawing.Size(74, 20);
+            this.btnAddNewCTPN.Text = "Add new";
+            this.btnAddNewCTPN.Click += new System.EventHandler(this.addNewCTPN_Click);
             // 
             // bindingNavigatorCountItem1
             // 
@@ -658,12 +663,12 @@
             this.phieuNhapBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.phieuNhapBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.phieuNhapGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewDatHang)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cTPNGridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPNBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewPhieuNhap)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cTPNBindingNavigator)).EndInit();
             this.cTPNBindingNavigator.ResumeLayout(false);
             this.cTPNBindingNavigator.PerformLayout();
@@ -687,7 +692,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanelMain;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.BindingNavigator phieuNhapBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton btnAddNewPhieuNhap;
         private System.Windows.Forms.BindingSource phieuNhapBindingSource;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
@@ -700,7 +705,7 @@
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private DevExpress.XtraGrid.GridControl phieuNhapGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewDatHang;
         private DevExpress.XtraGrid.Columns.GridColumn colMAPN;
         private DevExpress.XtraGrid.Columns.GridColumn colNGAY;
         private DevExpress.XtraGrid.Columns.GridColumn colMasoDDH;
@@ -712,13 +717,13 @@
         private QLVT_CN_DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.Panel panel2;
         private DevExpress.XtraGrid.GridControl cTPNGridControl;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewPhieuNhap;
         private DevExpress.XtraGrid.Columns.GridColumn colMAPN1;
         private DevExpress.XtraGrid.Columns.GridColumn colMAVT;
         private DevExpress.XtraGrid.Columns.GridColumn colSOLUONG;
         private DevExpress.XtraGrid.Columns.GridColumn colDONGIA;
         private System.Windows.Forms.BindingNavigator cTPNBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem1;
+        private System.Windows.Forms.ToolStripButton btnAddNewCTPN;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;

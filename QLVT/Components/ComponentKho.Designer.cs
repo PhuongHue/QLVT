@@ -36,7 +36,7 @@
             this.tableAdapterManager = new QLVT.QLVT_CN_DataSetTableAdapters.TableAdapterManager();
             this.khoTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.KhoTableAdapter();
             this.chiNhanhBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.btnAddKho = new System.Windows.Forms.ToolStripButton();
             this.fKKhoKhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
@@ -49,7 +49,7 @@
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.chiNhanhGridControl = new DevExpress.XtraGrid.GridControl();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridViewKho = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTENKHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colDIACHI = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -60,7 +60,7 @@
             this.chiNhanhBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fKKhoKhoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhGridControl)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewKho)).BeginInit();
             this.SuspendLayout();
             // 
             // qLVT_CN_DataSet
@@ -98,7 +98,7 @@
             // 
             // chiNhanhBindingNavigator
             // 
-            this.chiNhanhBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.chiNhanhBindingNavigator.AddNewItem = this.btnAddKho;
             this.chiNhanhBindingNavigator.BindingSource = this.fKKhoKhoBindingSource;
             this.chiNhanhBindingNavigator.CountItem = this.bindingNavigatorCountItem;
             this.chiNhanhBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
@@ -112,7 +112,7 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
+            this.btnAddKho,
             this.bindingNavigatorDeleteItem});
             this.chiNhanhBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.chiNhanhBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
@@ -125,15 +125,16 @@
             this.chiNhanhBindingNavigator.TabIndex = 0;
             this.chiNhanhBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
+            // btnAddKho
             // 
-            this.bindingNavigatorAddNewItem.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 20);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
+            this.btnAddKho.BackColor = System.Drawing.Color.Aqua;
+            this.btnAddKho.Image = ((System.Drawing.Image)(resources.GetObject("btnAddKho.Image")));
+            this.btnAddKho.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddKho.Name = "btnAddKho";
+            this.btnAddKho.RightToLeftAutoMirrorImage = true;
+            this.btnAddKho.Size = new System.Drawing.Size(74, 20);
+            this.btnAddKho.Text = "Add new";
+            this.btnAddKho.Click += new System.EventHandler(this.btnAddKho_Click);
             // 
             // fKKhoKhoBindingSource
             // 
@@ -222,22 +223,24 @@
             this.chiNhanhGridControl.DataSource = this.fKKhoKhoBindingSource;
             this.chiNhanhGridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.chiNhanhGridControl.Location = new System.Drawing.Point(0, 30);
-            this.chiNhanhGridControl.MainView = this.gridView1;
+            this.chiNhanhGridControl.MainView = this.gridViewKho;
             this.chiNhanhGridControl.Name = "chiNhanhGridControl";
             this.chiNhanhGridControl.Size = new System.Drawing.Size(746, 402);
             this.chiNhanhGridControl.TabIndex = 1;
             this.chiNhanhGridControl.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.gridViewKho});
             // 
-            // gridView1
+            // gridViewKho
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridViewKho.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colMAKHO,
             this.colTENKHO,
             this.colDIACHI,
             this.colMACN});
-            this.gridView1.GridControl = this.chiNhanhGridControl;
-            this.gridView1.Name = "gridView1";
+            this.gridViewKho.GridControl = this.chiNhanhGridControl;
+            this.gridViewKho.Name = "gridViewKho";
+            this.gridViewKho.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewKho_FocusedRowChanged);
+            this.gridViewKho.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewKho_RowUpdated);
             // 
             // colMAKHO
             // 
@@ -282,7 +285,7 @@
             this.chiNhanhBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fKKhoKhoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhGridControl)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridViewKho)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -295,7 +298,7 @@
         private QLVT_CN_DataSetTableAdapters.ChiNhanhTableAdapter chiNhanhTableAdapter;
         private QLVT_CN_DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator chiNhanhBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton btnAddKho;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -309,7 +312,7 @@
         private QLVT_CN_DataSetTableAdapters.KhoTableAdapter khoTableAdapter;
         private DevExpress.XtraGrid.GridControl chiNhanhGridControl;
         private System.Windows.Forms.BindingSource fKKhoKhoBindingSource;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridViewKho;
         private DevExpress.XtraGrid.Columns.GridColumn colMAKHO;
         private DevExpress.XtraGrid.Columns.GridColumn colTENKHO;
         private DevExpress.XtraGrid.Columns.GridColumn colDIACHI;
