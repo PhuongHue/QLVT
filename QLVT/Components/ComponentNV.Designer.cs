@@ -36,10 +36,10 @@
             this.tableAdapterManager = new QLVT.QLVT_CN_DataSetTableAdapters.TableAdapterManager();
             this.nhanVienTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.NhanVienTableAdapter();
             this.chiNhanhBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
+            this.btnAddNewItemNV = new System.Windows.Forms.ToolStripButton();
             this.fKNhanVienChiNhanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.btnDeleteItemNV = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -58,6 +58,7 @@
             this.colLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnInDSNV = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingNavigator)).BeginInit();
@@ -102,10 +103,10 @@
             // 
             // chiNhanhBindingNavigator
             // 
-            this.chiNhanhBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
+            this.chiNhanhBindingNavigator.AddNewItem = this.btnAddNewItemNV;
             this.chiNhanhBindingNavigator.BindingSource = this.fKNhanVienChiNhanhBindingSource;
             this.chiNhanhBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.chiNhanhBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.chiNhanhBindingNavigator.DeleteItem = this.btnDeleteItemNV;
             this.chiNhanhBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -116,8 +117,9 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem});
+            this.btnAddNewItemNV,
+            this.btnDeleteItemNV,
+            this.btnInDSNV});
             this.chiNhanhBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.chiNhanhBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.chiNhanhBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -129,16 +131,16 @@
             this.chiNhanhBindingNavigator.TabIndex = 0;
             this.chiNhanhBindingNavigator.Text = "bindingNavigator1";
             // 
-            // bindingNavigatorAddNewItem
+            // btnAddNewItemNV
             // 
-            this.bindingNavigatorAddNewItem.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(74, 20);
-            this.bindingNavigatorAddNewItem.Text = "Add new";
-            this.bindingNavigatorAddNewItem.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
+            this.btnAddNewItemNV.BackColor = System.Drawing.Color.Aqua;
+            this.btnAddNewItemNV.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewItemNV.Image")));
+            this.btnAddNewItemNV.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddNewItemNV.Name = "btnAddNewItemNV";
+            this.btnAddNewItemNV.RightToLeftAutoMirrorImage = true;
+            this.btnAddNewItemNV.Size = new System.Drawing.Size(74, 20);
+            this.btnAddNewItemNV.Text = "Add new";
+            this.btnAddNewItemNV.Click += new System.EventHandler(this.bindingNavigatorAddNewItem_Click);
             // 
             // fKNhanVienChiNhanhBindingSource
             // 
@@ -152,15 +154,15 @@
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
-            // bindingNavigatorDeleteItem
+            // btnDeleteItemNV
             // 
-            this.bindingNavigatorDeleteItem.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(60, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.btnDeleteItemNV.BackColor = System.Drawing.Color.Aqua;
+            this.btnDeleteItemNV.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteItemNV.Image")));
+            this.btnDeleteItemNV.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDeleteItemNV.Name = "btnDeleteItemNV";
+            this.btnDeleteItemNV.RightToLeftAutoMirrorImage = true;
+            this.btnDeleteItemNV.Size = new System.Drawing.Size(60, 20);
+            this.btnDeleteItemNV.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -306,6 +308,17 @@
             this.colTrangThaiXoa.Visible = true;
             this.colTrangThaiXoa.VisibleIndex = 7;
             // 
+            // btnInDSNV
+            // 
+            this.btnInDSNV.BackColor = System.Drawing.Color.Aqua;
+            this.btnInDSNV.Image = ((System.Drawing.Image)(resources.GetObject("btnInDSNV.Image")));
+            this.btnInDSNV.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInDSNV.Margin = new System.Windows.Forms.Padding(5);
+            this.btnInDSNV.Name = "btnInDSNV";
+            this.btnInDSNV.Size = new System.Drawing.Size(70, 20);
+            this.btnInDSNV.Text = "In DSNV";
+            this.btnInDSNV.Click += new System.EventHandler(this.btnInDSNV_Click);
+            // 
             // ComponentNV
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -334,9 +347,9 @@
         private QLVT_CN_DataSetTableAdapters.ChiNhanhTableAdapter chiNhanhTableAdapter;
         private QLVT_CN_DataSetTableAdapters.TableAdapterManager tableAdapterManager;
         private System.Windows.Forms.BindingNavigator chiNhanhBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
+        private System.Windows.Forms.ToolStripButton btnAddNewItemNV;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton btnDeleteItemNV;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -357,5 +370,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colLUONG;
         private DevExpress.XtraGrid.Columns.GridColumn colMACN;
         private DevExpress.XtraGrid.Columns.GridColumn colTrangThaiXoa;
+        private System.Windows.Forms.ToolStripButton btnInDSNV;
     }
 }

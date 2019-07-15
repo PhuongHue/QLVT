@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.tabControl = new DevExpress.XtraTab.XtraTabControl();
             this.pageNV = new DevExpress.XtraTab.XtraTabPage();
@@ -41,6 +42,8 @@
             this.pageNhap = new DevExpress.XtraTab.XtraTabPage();
             this.componentNhapHang1 = new QLVT.Components.ComponentNhapHang();
             this.pageXH = new DevExpress.XtraTab.XtraTabPage();
+            this.componentXH1 = new QLVT.Components.ComponentXH();
+            this.pageTaiKhoan = new DevExpress.XtraTab.XtraTabPage();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.tSLabelMNV = new System.Windows.Forms.ToolStripStatusLabel();
             this.tSLabelName = new System.Windows.Forms.ToolStripStatusLabel();
@@ -48,12 +51,12 @@
             this.qLVT_MASTER_DataSet = new QLVT.QLVT_MASTER_DataSet();
             this.tableAdapterManager = new QLVT.QLVT_MASTER_DataSetTableAdapters.TableAdapterManager();
             this.label1 = new System.Windows.Forms.Label();
-            this.v_DSPMBindingSource = new System.Windows.Forms.BindingSource();
+            this.v_DSPMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.v_DSPMTableAdapter = new QLVT.QLVT_MASTER_DataSetTableAdapters.V_DSPMTableAdapter();
             this.v_DSPMComboBox = new System.Windows.Forms.ComboBox();
             this.btnSaveAll = new DevExpress.XtraEditors.SimpleButton();
             this.btnReload = new DevExpress.XtraEditors.SimpleButton();
-            this.componentXH1 = new QLVT.Components.ComponentXH();
+            this.componentTaiKhoan1 = new QLVT.Components.ComponentTaiKhoan();
             ((System.ComponentModel.ISupportInitialize)(this.tabControl)).BeginInit();
             this.tabControl.SuspendLayout();
             this.pageNV.SuspendLayout();
@@ -62,6 +65,7 @@
             this.pageDH.SuspendLayout();
             this.pageNhap.SuspendLayout();
             this.pageXH.SuspendLayout();
+            this.pageTaiKhoan.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_MASTER_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.v_DSPMBindingSource)).BeginInit();
@@ -83,7 +87,8 @@
             this.pageKho,
             this.pageDH,
             this.pageNhap,
-            this.pageXH});
+            this.pageXH,
+            this.pageTaiKhoan});
             // 
             // pageNV
             // 
@@ -168,6 +173,21 @@
             this.pageXH.Name = "pageXH";
             this.pageXH.Size = new System.Drawing.Size(972, 399);
             this.pageXH.Text = "Xuất hàng";
+            // 
+            // componentXH1
+            // 
+            this.componentXH1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.componentXH1.Location = new System.Drawing.Point(0, 0);
+            this.componentXH1.Name = "componentXH1";
+            this.componentXH1.Size = new System.Drawing.Size(972, 399);
+            this.componentXH1.TabIndex = 0;
+            // 
+            // pageTaiKhoan
+            // 
+            this.pageTaiKhoan.Controls.Add(this.componentTaiKhoan1);
+            this.pageTaiKhoan.Name = "pageTaiKhoan";
+            this.pageTaiKhoan.Size = new System.Drawing.Size(972, 399);
+            this.pageTaiKhoan.Text = "Tài khoản";
             // 
             // statusStrip1
             // 
@@ -274,13 +294,13 @@
             this.btnReload.Text = "Reload";
             this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
             // 
-            // componentXH1
+            // componentTaiKhoan1
             // 
-            this.componentXH1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.componentXH1.Location = new System.Drawing.Point(0, 0);
-            this.componentXH1.Name = "componentXH1";
-            this.componentXH1.Size = new System.Drawing.Size(972, 399);
-            this.componentXH1.TabIndex = 0;
+            this.componentTaiKhoan1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.componentTaiKhoan1.Location = new System.Drawing.Point(0, 0);
+            this.componentTaiKhoan1.Name = "componentTaiKhoan1";
+            this.componentTaiKhoan1.Size = new System.Drawing.Size(972, 399);
+            this.componentTaiKhoan1.TabIndex = 0;
             // 
             // FormMain
             // 
@@ -306,6 +326,7 @@
             this.pageDH.ResumeLayout(false);
             this.pageNhap.ResumeLayout(false);
             this.pageXH.ResumeLayout(false);
+            this.pageTaiKhoan.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_MASTER_DataSet)).EndInit();
@@ -342,5 +363,7 @@
         private DevExpress.XtraEditors.SimpleButton btnReload;
         private Components.ComponentNhapHang componentNhapHang1;
         private Components.ComponentXH componentXH1;
+        private DevExpress.XtraTab.XtraTabPage pageTaiKhoan;
+        private Components.ComponentTaiKhoan componentTaiKhoan1;
     }
 }

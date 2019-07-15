@@ -38,10 +38,10 @@
             this.qLVT_CN_DataSet = new QLVT.QLVT_CN_DataSet();
             this.panel2 = new System.Windows.Forms.Panel();
             this.phieuXuatBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.phieuXuatNewItem = new System.Windows.Forms.ToolStripButton();
+            this.btnNewItemPX = new System.Windows.Forms.ToolStripButton();
             this.phieuXuatBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.btnDeleteItemPX = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
@@ -59,10 +59,10 @@
             this.colMAKHO = new DevExpress.XtraGrid.Columns.GridColumn();
             this.panel4 = new System.Windows.Forms.Panel();
             this.cTPXBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.cTPXNewItem = new System.Windows.Forms.ToolStripButton();
+            this.btnAddNewCTPX = new System.Windows.Forms.ToolStripButton();
             this.cTPXBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.bindingNavigatorCountItem1 = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorDeleteItem1 = new System.Windows.Forms.ToolStripButton();
+            this.btnDeleteItemCTPX = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem1 = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator3 = new System.Windows.Forms.ToolStripSeparator();
@@ -187,10 +187,10 @@
             // 
             // phieuXuatBindingNavigator
             // 
-            this.phieuXuatBindingNavigator.AddNewItem = this.phieuXuatNewItem;
+            this.phieuXuatBindingNavigator.AddNewItem = this.btnNewItemPX;
             this.phieuXuatBindingNavigator.BindingSource = this.phieuXuatBindingSource;
             this.phieuXuatBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.phieuXuatBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.phieuXuatBindingNavigator.DeleteItem = this.btnDeleteItemPX;
             this.phieuXuatBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -201,8 +201,8 @@
             this.bindingNavigatorMoveNextItem,
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
-            this.phieuXuatNewItem,
-            this.bindingNavigatorDeleteItem});
+            this.btnNewItemPX,
+            this.btnDeleteItemPX});
             this.phieuXuatBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.phieuXuatBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.phieuXuatBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -214,16 +214,16 @@
             this.phieuXuatBindingNavigator.TabIndex = 1;
             this.phieuXuatBindingNavigator.Text = "bindingNavigator1";
             // 
-            // phieuXuatNewItem
+            // btnNewItemPX
             // 
-            this.phieuXuatNewItem.BackColor = System.Drawing.Color.Aqua;
-            this.phieuXuatNewItem.Image = ((System.Drawing.Image)(resources.GetObject("phieuXuatNewItem.Image")));
-            this.phieuXuatNewItem.Margin = new System.Windows.Forms.Padding(5);
-            this.phieuXuatNewItem.Name = "phieuXuatNewItem";
-            this.phieuXuatNewItem.RightToLeftAutoMirrorImage = true;
-            this.phieuXuatNewItem.Size = new System.Drawing.Size(74, 20);
-            this.phieuXuatNewItem.Text = "Add new";
-            this.phieuXuatNewItem.Click += new System.EventHandler(this.phieuXuatNewItem_Click);
+            this.btnNewItemPX.BackColor = System.Drawing.Color.Aqua;
+            this.btnNewItemPX.Image = ((System.Drawing.Image)(resources.GetObject("btnNewItemPX.Image")));
+            this.btnNewItemPX.Margin = new System.Windows.Forms.Padding(5);
+            this.btnNewItemPX.Name = "btnNewItemPX";
+            this.btnNewItemPX.RightToLeftAutoMirrorImage = true;
+            this.btnNewItemPX.Size = new System.Drawing.Size(74, 20);
+            this.btnNewItemPX.Text = "Add new";
+            this.btnNewItemPX.Click += new System.EventHandler(this.phieuXuatNewItem_Click);
             // 
             // phieuXuatBindingSource
             // 
@@ -237,15 +237,15 @@
             this.bindingNavigatorCountItem.Text = "of {0}";
             this.bindingNavigatorCountItem.ToolTipText = "Total number of items";
             // 
-            // bindingNavigatorDeleteItem
+            // btnDeleteItemPX
             // 
-            this.bindingNavigatorDeleteItem.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(60, 20);
-            this.bindingNavigatorDeleteItem.Text = "Delete";
+            this.btnDeleteItemPX.BackColor = System.Drawing.Color.Aqua;
+            this.btnDeleteItemPX.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteItemPX.Image")));
+            this.btnDeleteItemPX.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDeleteItemPX.Name = "btnDeleteItemPX";
+            this.btnDeleteItemPX.RightToLeftAutoMirrorImage = true;
+            this.btnDeleteItemPX.Size = new System.Drawing.Size(60, 20);
+            this.btnDeleteItemPX.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -384,10 +384,10 @@
             // 
             // cTPXBindingNavigator
             // 
-            this.cTPXBindingNavigator.AddNewItem = this.cTPXNewItem;
+            this.cTPXBindingNavigator.AddNewItem = this.btnAddNewCTPX;
             this.cTPXBindingNavigator.BindingSource = this.cTPXBindingSource;
             this.cTPXBindingNavigator.CountItem = this.bindingNavigatorCountItem1;
-            this.cTPXBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem1;
+            this.cTPXBindingNavigator.DeleteItem = this.btnDeleteItemCTPX;
             this.cTPXBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem1,
             this.bindingNavigatorMovePreviousItem1,
@@ -398,8 +398,8 @@
             this.bindingNavigatorMoveNextItem1,
             this.bindingNavigatorMoveLastItem1,
             this.bindingNavigatorSeparator5,
-            this.cTPXNewItem,
-            this.bindingNavigatorDeleteItem1});
+            this.btnAddNewCTPX,
+            this.btnDeleteItemCTPX});
             this.cTPXBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.cTPXBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem1;
             this.cTPXBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem1;
@@ -411,16 +411,16 @@
             this.cTPXBindingNavigator.TabIndex = 1;
             this.cTPXBindingNavigator.Text = "bindingNavigator2";
             // 
-            // cTPXNewItem
+            // btnAddNewCTPX
             // 
-            this.cTPXNewItem.BackColor = System.Drawing.Color.Aqua;
-            this.cTPXNewItem.Image = ((System.Drawing.Image)(resources.GetObject("cTPXNewItem.Image")));
-            this.cTPXNewItem.Margin = new System.Windows.Forms.Padding(5);
-            this.cTPXNewItem.Name = "cTPXNewItem";
-            this.cTPXNewItem.RightToLeftAutoMirrorImage = true;
-            this.cTPXNewItem.Size = new System.Drawing.Size(74, 20);
-            this.cTPXNewItem.Text = "Add new";
-            this.cTPXNewItem.Click += new System.EventHandler(this.cTPXNewItem_Click);
+            this.btnAddNewCTPX.BackColor = System.Drawing.Color.Aqua;
+            this.btnAddNewCTPX.Image = ((System.Drawing.Image)(resources.GetObject("btnAddNewCTPX.Image")));
+            this.btnAddNewCTPX.Margin = new System.Windows.Forms.Padding(5);
+            this.btnAddNewCTPX.Name = "btnAddNewCTPX";
+            this.btnAddNewCTPX.RightToLeftAutoMirrorImage = true;
+            this.btnAddNewCTPX.Size = new System.Drawing.Size(74, 20);
+            this.btnAddNewCTPX.Text = "Add new";
+            this.btnAddNewCTPX.Click += new System.EventHandler(this.cTPXNewItem_Click);
             // 
             // cTPXBindingSource
             // 
@@ -434,15 +434,15 @@
             this.bindingNavigatorCountItem1.Text = "of {0}";
             this.bindingNavigatorCountItem1.ToolTipText = "Total number of items";
             // 
-            // bindingNavigatorDeleteItem1
+            // btnDeleteItemCTPX
             // 
-            this.bindingNavigatorDeleteItem1.BackColor = System.Drawing.Color.Aqua;
-            this.bindingNavigatorDeleteItem1.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem1.Image")));
-            this.bindingNavigatorDeleteItem1.Margin = new System.Windows.Forms.Padding(5);
-            this.bindingNavigatorDeleteItem1.Name = "bindingNavigatorDeleteItem1";
-            this.bindingNavigatorDeleteItem1.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem1.Size = new System.Drawing.Size(60, 20);
-            this.bindingNavigatorDeleteItem1.Text = "Delete";
+            this.btnDeleteItemCTPX.BackColor = System.Drawing.Color.Aqua;
+            this.btnDeleteItemCTPX.Image = ((System.Drawing.Image)(resources.GetObject("btnDeleteItemCTPX.Image")));
+            this.btnDeleteItemCTPX.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDeleteItemCTPX.Name = "btnDeleteItemCTPX";
+            this.btnDeleteItemCTPX.RightToLeftAutoMirrorImage = true;
+            this.btnDeleteItemCTPX.Size = new System.Drawing.Size(60, 20);
+            this.btnDeleteItemCTPX.Text = "Delete";
             // 
             // bindingNavigatorMoveFirstItem1
             // 
@@ -661,10 +661,10 @@
         private QLVT_CN_DataSetTableAdapters.KhoTableAdapter khoTableAdapter;
         private System.Windows.Forms.ComboBox khoComboBox;
         private System.Windows.Forms.BindingNavigator phieuXuatBindingNavigator;
-        private System.Windows.Forms.ToolStripButton phieuXuatNewItem;
+        private System.Windows.Forms.ToolStripButton btnNewItemPX;
         private System.Windows.Forms.BindingSource phieuXuatBindingSource;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
+        private System.Windows.Forms.ToolStripButton btnDeleteItemPX;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
@@ -682,10 +682,10 @@
         private QLVT_CN_DataSetTableAdapters.VattuTableAdapter vattuTableAdapter;
         private QLVT_CN_DataSetTableAdapters.PhieuXuatTableAdapter phieuXuatTableAdapter;
         private System.Windows.Forms.BindingNavigator cTPXBindingNavigator;
-        private System.Windows.Forms.ToolStripButton cTPXNewItem;
+        private System.Windows.Forms.ToolStripButton btnAddNewCTPX;
         private System.Windows.Forms.BindingSource cTPXBindingSource;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem1;
+        private System.Windows.Forms.ToolStripButton btnDeleteItemCTPX;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem1;
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator3;

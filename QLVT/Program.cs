@@ -32,6 +32,8 @@ namespace QLVT
         public static PhieuXuatTableAdapter PhieuXuatTableAdapter = new PhieuXuatTableAdapter();
         public static VattuTableAdapter VattuTableAdapter = new VattuTableAdapter();
 
+        public static SP_List_LOGINTableAdapter SP_List_LOGINTableAdapter = new SP_List_LOGINTableAdapter();
+        public static QueriesTableAdapter QueriesTableAdapter = new QueriesTableAdapter();
         public static void FillAllTable()
         {
             try
@@ -46,9 +48,11 @@ namespace QLVT
                 NhanVienTableAdapter.Fill(QLVT_CN_DataSet.NhanVien);
                 PhieuNhapTableAdapter.Fill(QLVT_CN_DataSet.PhieuNhap);
                 VattuTableAdapter.Fill(QLVT_CN_DataSet.Vattu);
+                SP_List_LOGINTableAdapter.Fill(QLVT_CN_DataSet.SP_List_LOGIN);
             }
             catch (SqlException e)
             {
+                MessageBox.Show(e.Message);
                 MessageBox.Show(SqlMessageResolver.SqlMessageResolve(e.Message));
             }
 
@@ -56,6 +60,12 @@ namespace QLVT
 
         public static void updateAll()
         {
+            if(_ketNoiDB.GroupId == "CONGTY")
+            {
+                MessageBox.Show("Nhóm công ty không có quyền sửa đổi.");
+                FillAllTable();
+            }
+            else
             try
             {
                 TableAdapterManager.UpdateAll(QLVT_CN_DataSet);
@@ -73,6 +83,7 @@ namespace QLVT
 
         public static void ChangeConnection(SqlConnection sqlConnection)
         {
+            //Tables
             TableAdapterManager.Connection = sqlConnection;
             ChiNhanhTableAdapter.Connection = sqlConnection;
             CTDDHTableAdapter.Connection = sqlConnection;
@@ -83,6 +94,10 @@ namespace QLVT
             NhanVienTableAdapter.Connection = sqlConnection;
             PhieuNhapTableAdapter.Connection = sqlConnection;
             VattuTableAdapter.Connection = sqlConnection;
+            
+            //SPs
+            SP_List_LOGINTableAdapter.Connection = sqlConnection;
+            
         }
 
         private static void InitServices()

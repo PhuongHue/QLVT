@@ -34,14 +34,27 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.BonusSkins.v17.1" />
+    <Reference Include="DevExpress.Charts.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Data.v17.1" />
+    <Reference Include="DevExpress.DataAccess.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v17.1" />
     <Reference Include="DevExpress.Sparkline.v17.1.Core" />
+    <Reference Include="DevExpress.Utils.v17.1.UI, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v17.1" />
     <Reference Include="DevExpress.Printing.v17.1.Core" />
+    <Reference Include="DevExpress.XtraGauges.v17.1.Core, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v17.1, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v17.1.Extensions, Version=17.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -54,7 +67,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BaoCao\ReportDSNV.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\ReportDSNV.Designer.cs">
+      <DependentUpon>ReportDSNV.cs</DependentUpon>
+    </Compile>
     <Compile Include="BatLoi\SqlMessageResolver.cs" />
+    <Compile Include="Components\ComponentBaoCao.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ComponentBaoCao.Designer.cs">
+      <DependentUpon>ComponentBaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="Components\ComponentDatHang.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -78,6 +103,12 @@
     </Compile>
     <Compile Include="Components\ComponentKho.Designer.cs">
       <DependentUpon>ComponentKho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Components\ComponentTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Components\ComponentTaiKhoan.Designer.cs">
+      <DependentUpon>ComponentTaiKhoan.cs</DependentUpon>
     </Compile>
     <Compile Include="Components\ComponentVT.cs">
       <SubType>UserControl</SubType>
@@ -119,6 +150,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLVT_MASTER_DataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="BaoCao\ReportDSNV.resx">
+      <DependentUpon>ReportDSNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ComponentBaoCao.resx">
+      <DependentUpon>ComponentBaoCao.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Components\ComponentDatHang.resx">
       <DependentUpon>ComponentDatHang.cs</DependentUpon>
     </EmbeddedResource>
@@ -130,6 +167,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ComponentKho.resx">
       <DependentUpon>ComponentKho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Components\ComponentTaiKhoan.resx">
+      <DependentUpon>ComponentTaiKhoan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ComponentVT.resx">
       <DependentUpon>ComponentVT.cs</DependentUpon>

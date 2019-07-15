@@ -24,6 +24,13 @@ namespace QLVT.Components
         {
             datHangBindingSource.DataSource = Program.QLVT_CN_DataSet;
             vattuBindingSource.DataSource = Program.QLVT_CN_DataSet;
+            if (Program._ketNoiDB.GroupId == "CONGTY")
+            {
+                btnAddNewPhieuNhap.Dispose();
+                btnDeleteItemPN.Dispose();
+                btnAddNewCTPN.Dispose();
+                btnDeleteItemCTPN.Dispose();
+            }
         }
 
         private void addNewPhieuNhap_Click(object sender, EventArgs e)
@@ -37,6 +44,7 @@ namespace QLVT.Components
         private void gridViewDatHang_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
             btnAddNewPhieuNhap.Enabled = true;
+            Program.updateAll();
         }
 
         private void gridViewDatHang_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
@@ -54,6 +62,7 @@ namespace QLVT.Components
         private void gridViewPhieuNhap_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
             btnAddNewCTPN.Enabled = true;
+            Program.updateAll();
         }
 
         private void gridViewPhieuNhap_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)

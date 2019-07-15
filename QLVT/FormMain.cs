@@ -25,6 +25,10 @@ namespace QLVT
             tSLabelMNV.Text += Program._ketNoiDB.UserName;
             tSLabelName.Text += Program._ketNoiDB.FullName;
             tSLabelNhom.Text += Program._ketNoiDB.GroupId;
+            if(Program._ketNoiDB.GroupId != "CONGTY")
+            {
+                v_DSPMComboBox.Enabled = false;
+            }
         }
 
         private void FormMain_Load(object sender, EventArgs e)

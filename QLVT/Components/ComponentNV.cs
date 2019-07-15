@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QLVT.BaoCao;
 
 namespace QLVT.Components
 {
@@ -16,22 +17,38 @@ namespace QLVT.Components
         public ComponentNV()
         {
             InitializeComponent();
+            load();
+        }
+
+        private void load()
+        {
             chiNhanhBindingSource.DataSource = Program.QLVT_CN_DataSet;
+            if (Program._ketNoiDB.GroupId == "CONGTY")
+            {
+                btnAddNewItemNV.Dispose();
+                btnDeleteItemNV.Dispose();
+            }
         }
 
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
-            bindingNavigatorAddNewItem.Enabled = false;
+            btnAddNewItemNV.Enabled = false;
         }
 
         private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
-            bindingNavigatorAddNewItem.Enabled = true;
+            btnAddNewItemNV.Enabled = true;
+            Program.updateAll();
         }
-        
+
         private void gridView1_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            bindingNavigatorAddNewItem.Enabled = true;
+            btnAddNewItemNV.Enabled = true;
+        }
+
+        private void btnInDSNV_Click(object sender, EventArgs e)
+        {
+            new ReportDSNV();
         }
     }
 }

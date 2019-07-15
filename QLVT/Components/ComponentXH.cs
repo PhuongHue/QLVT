@@ -18,87 +18,55 @@ namespace QLVT.Components
         {
             InitializeComponent();
             load();
-            eventListener();
         }
 
         private void load()
         {
             khoBindingSource.DataSource = Program.QLVT_CN_DataSet;
             vattuBindingSource.DataSource = Program.QLVT_CN_DataSet;
-        }
+            if (Program._ketNoiDB.GroupId == "CONGTY")
+            {
+                btnNewItemPX.Dispose();
+                btnDeleteItemPX.Dispose();
+                btnAddNewCTPX.Dispose();
+                btnDeleteItemCTPX.Dispose();
 
-        private void eventListener()
-        {
-            phieuXuatBindingSource.AddingNew += new AddingNewEventHandler(Event_phieuXuatBindingSourceAddNewItem);
-            cTPXBindingSource.AddingNew += new AddingNewEventHandler(Event_cTPXBindingSourceAddNewItem);
-
-        }
-
-        public void Event_phieuXuatBindingSourceAddNewItem(object sender, AddingNewEventArgs e)
-        {
-            try
-            {
-                Program.QLVT_CN_DataSet.EnforceConstraints = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(SqlMessageResolver.SqlMessageResolve(ex.Message));
-                phieuXuatBindingSource.RemoveCurrent();
-            }
-            finally
-            {
-                Program.QLVT_CN_DataSet.EnforceConstraints = false;
-            }
-        }
-
-        public void Event_cTPXBindingSourceAddNewItem(object sender, AddingNewEventArgs e)
-        {
-            try
-            {
-                Program.QLVT_CN_DataSet.EnforceConstraints = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(SqlMessageResolver.SqlMessageResolve(ex.Message));
-                cTPXBindingSource.RemoveCurrent();
-            }
-            finally
-            {
-                Program.QLVT_CN_DataSet.EnforceConstraints = false;
             }
         }
 
         private void phieuXuatNewItem_Click(object sender, EventArgs e)
         {
-            phieuXuatNewItem.Enabled = false;
+            btnNewItemPX.Enabled = false;
             ((DataRowView)phieuXuatBindingSource.Current)["MANV"] = Program._ketNoiDB.UserName;
         }
 
         private void gridViewPX_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
-            phieuXuatNewItem.Enabled = true;
+            btnNewItemPX.Enabled = true;
+            Program.updateAll();
         }
 
         private void gridViewPX_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            phieuXuatNewItem.Enabled = true;
+            btnNewItemPX.Enabled = true;
         }
 
         private void cTPXNewItem_Click(object sender, EventArgs e)
         {
-            cTPXNewItem.Enabled = false;
+            btnAddNewCTPX.Enabled = false;
             ((DataRowView)cTPXBindingSource.Current)["MAVT"]
                 = ((DataRowView)vattuBindingSource.Current)["MAVT"];
         }
 
         private void gridViewCTPX_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
-            cTPXNewItem.Enabled = true;
+            btnAddNewCTPX.Enabled = true;
+            Program.updateAll();
         }
 
         private void gridViewCTPX_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            cTPXNewItem.Enabled = true;
+            btnAddNewCTPX.Enabled = true;
         }
     }
 }

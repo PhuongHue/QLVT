@@ -24,6 +24,14 @@ namespace QLVT.Components
         {
             khoBindingSource.DataSource = Program.QLVT_CN_DataSet;
             vattuBindingSource.DataSource = Program.QLVT_CN_DataSet;
+            if(Program._ketNoiDB.GroupId == "CONGTY")
+            {
+                btnAddNewDH.Dispose();
+                btnDeleteItemDDH.Dispose();
+                btnAddNewCTDDH.Dispose();
+                btnDeleteItemCTDDH.Dispose();
+
+            }
         }
 
         private void btnAddNewDH_Click(object sender, EventArgs e)
@@ -35,6 +43,7 @@ namespace QLVT.Components
         private void gridViewDatHang_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
             btnAddNewDH.Enabled = true;
+            Program.updateAll();
         }
 
         private void gridViewDatHang_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)

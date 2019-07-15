@@ -63,7 +63,8 @@ namespace QLVT.KetNoi
             }
             catch (SqlException e)
             {
-                return SqlMessageResolver.SqlMessageResolve(e.Message);
+                //return SqlMessageResolver.SqlMessageResolve(e.Message);
+                return e.Message;
             }
         }
     }

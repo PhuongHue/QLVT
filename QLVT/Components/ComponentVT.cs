@@ -18,41 +18,24 @@ namespace QLVT.Components
         {
             InitializeComponent();
             load();
-            eventListener();
         }
 
         private void load()
         {
             vattuBindingSource.DataSource = Program.QLVT_CN_DataSet;
             vattuTableAdapter.Fill(Program.QLVT_CN_DataSet.Vattu);
-        }
-
-        private void eventListener()
-        {
-            vattuBindingSource.AddingNew += new AddingNewEventHandler(Event_vattuBindingSourceAddNewItem);
-
-        }
-
-        public void Event_vattuBindingSourceAddNewItem(object sender, AddingNewEventArgs e)
-        {
-            try
+            if (Program._ketNoiDB.GroupId == "CONGTY")
             {
-                Program.QLVT_CN_DataSet.EnforceConstraints = true;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(SqlMessageResolver.SqlMessageResolve(ex.Message));
-                vattuBindingSource.RemoveCurrent();
-            }
-            finally
-            {
-                Program.QLVT_CN_DataSet.EnforceConstraints = false;
+                btnAddNewVT.Dispose();
+                btnDeleteItemVT.Dispose();
+
             }
         }
 
         private void gridViewVatTu_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
             btnAddNewVT.Enabled = true;
+            Program.updateAll();
         }
 
         private void btnAddNewVT_Click(object sender, EventArgs e)

@@ -16,8 +16,18 @@ namespace QLVT.Components
         public ComponentKho()
         {
             InitializeComponent();
+            load();
+        }
+
+        private void load()
+        {
             chiNhanhBindingSource.DataSource = Program.QLVT_CN_DataSet;
             chiNhanhTableAdapter.Fill(Program.QLVT_CN_DataSet.ChiNhanh);
+            if (Program._ketNoiDB.GroupId == "CONGTY")
+            {
+                btnAddKho.Dispose();
+                btnDeleteItemKho.Dispose();
+            }
         }
 
         private void btnAddKho_Click(object sender, EventArgs e)
@@ -28,6 +38,7 @@ namespace QLVT.Components
         private void gridViewKho_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
         {
             btnAddKho.Enabled = true;
+            Program.updateAll();
         }
 
         private void gridViewKho_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
