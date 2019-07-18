@@ -85,6 +85,7 @@
             this.vattuTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.VattuTableAdapter();
             this.phieuXuatTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.PhieuXuatTableAdapter();
             this.cTPXTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.CTPXTableAdapter();
+            this.btnTKPX = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.khoBindingSource)).BeginInit();
@@ -202,7 +203,8 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.btnNewItemPX,
-            this.btnDeleteItemPX});
+            this.btnDeleteItemPX,
+            this.btnTKPX});
             this.phieuXuatBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.phieuXuatBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.phieuXuatBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -616,6 +618,17 @@
             // 
             this.cTPXTableAdapter.ClearBeforeFill = true;
             // 
+            // btnTKPX
+            // 
+            this.btnTKPX.BackColor = System.Drawing.Color.Aqua;
+            this.btnTKPX.Image = ((System.Drawing.Image)(resources.GetObject("btnTKPX.Image")));
+            this.btnTKPX.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTKPX.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTKPX.Name = "btnTKPX";
+            this.btnTKPX.Size = new System.Drawing.Size(94, 20);
+            this.btnTKPX.Text = "Thống kê PX";
+            this.btnTKPX.Click += new System.EventHandler(this.btnTKPX_Click);
+            // 
             // ComponentXH
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -708,5 +721,6 @@
         private DevExpress.XtraGrid.Columns.GridColumn colMAVT;
         private DevExpress.XtraGrid.Columns.GridColumn colSOLUONG;
         private DevExpress.XtraGrid.Columns.GridColumn colDONGIA;
+        private System.Windows.Forms.ToolStripButton btnTKPX;
     }
 }

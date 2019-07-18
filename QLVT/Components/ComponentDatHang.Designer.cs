@@ -85,6 +85,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cTDDHTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.CTDDHTableAdapter();
             this.vattuTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.VattuTableAdapter();
+            this.btnInDHCCPN = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datHangBindingSource)).BeginInit();
@@ -280,7 +281,8 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.btnAddNewDH,
-            this.btnDeleteItemDDH});
+            this.btnDeleteItemDDH,
+            this.btnInDHCCPN});
             this.datHangBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.datHangBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.datHangBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -621,6 +623,15 @@
             // 
             this.vattuTableAdapter.ClearBeforeFill = true;
             // 
+            // btnInDHCCPN
+            // 
+            this.btnInDHCCPN.Image = ((System.Drawing.Image)(resources.GetObject("btnInDHCCPN.Image")));
+            this.btnInDHCCPN.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInDHCCPN.Name = "btnInDHCCPN";
+            this.btnInDHCCPN.Size = new System.Drawing.Size(121, 20);
+            this.btnInDHCCPN.Text = "In DH chưa có PN";
+            this.btnInDHCCPN.Click += new System.EventHandler(this.btnInDHCCPN_Click);
+            // 
             // ComponentDatHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -713,5 +724,6 @@
         private System.Windows.Forms.BindingSource vattuBindingSource;
         private System.Windows.Forms.Label label2;
         private QLVT_CN_DataSetTableAdapters.VattuTableAdapter vattuTableAdapter;
+        private System.Windows.Forms.ToolStripButton btnInDHCCPN;
     }
 }

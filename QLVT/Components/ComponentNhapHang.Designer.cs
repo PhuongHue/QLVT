@@ -50,6 +50,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnTKPN = new System.Windows.Forms.ToolStripButton();
             this.phieuNhapGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridViewDatHang = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAPN = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -194,7 +195,8 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.btnAddNewPhieuNhap,
-            this.btnDeleteItemPN});
+            this.btnDeleteItemPN,
+            this.btnTKPN});
             this.phieuNhapBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.phieuNhapBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.phieuNhapBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -298,6 +300,17 @@
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
+            // 
+            // btnTKPN
+            // 
+            this.btnTKPN.BackColor = System.Drawing.Color.Aqua;
+            this.btnTKPN.Image = ((System.Drawing.Image)(resources.GetObject("btnTKPN.Image")));
+            this.btnTKPN.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTKPN.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTKPN.Name = "btnTKPN";
+            this.btnTKPN.Size = new System.Drawing.Size(96, 20);
+            this.btnTKPN.Text = "Thống kê PN";
+            this.btnTKPN.Click += new System.EventHandler(this.btnTKPN_Click);
             // 
             // phieuNhapGridControl
             // 
@@ -741,5 +754,6 @@
         private System.Windows.Forms.BindingSource vattuBindingSource;
         private QLVT_CN_DataSetTableAdapters.VattuTableAdapter vattuTableAdapter;
         private System.Windows.Forms.BindingSource cTDDHbindingSource;
+        private System.Windows.Forms.ToolStripButton btnTKPN;
     }
 }
