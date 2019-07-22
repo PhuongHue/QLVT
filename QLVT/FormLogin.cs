@@ -39,5 +39,12 @@ namespace QLVT
             MessageBox.Show(_dataRepository.ConnectServer());
             if (_dataRepository.Ready) this.Close();
         }
+
+        private void btnThoat_Click(object sender, EventArgs e)
+        {
+            Program.running = false;
+            Program._ketNoiDB.Ready = false;
+            this.Dispose();
+        }
     }
 }

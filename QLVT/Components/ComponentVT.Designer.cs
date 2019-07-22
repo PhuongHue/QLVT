@@ -47,6 +47,7 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.vattuGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridViewVatTu = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnDSVT = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vattuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vattuBindingNavigator)).BeginInit();
@@ -86,7 +87,8 @@
             this.bindingNavigatorMoveLastItem,
             this.bindingNavigatorSeparator2,
             this.btnAddNewVT,
-            this.btnDeleteItemVT});
+            this.btnDeleteItemVT,
+            this.btnDSVT});
             this.vattuBindingNavigator.Location = new System.Drawing.Point(0, 0);
             this.vattuBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
             this.vattuBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
@@ -205,6 +207,17 @@
             this.gridViewVatTu.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewVatTu_FocusedRowChanged);
             this.gridViewVatTu.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewVatTu_RowUpdated);
             // 
+            // btnDSVT
+            // 
+            this.btnDSVT.BackColor = System.Drawing.Color.Aqua;
+            this.btnDSVT.Image = ((System.Drawing.Image)(resources.GetObject("btnDSVT.Image")));
+            this.btnDSVT.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDSVT.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDSVT.Name = "btnDSVT";
+            this.btnDSVT.Size = new System.Drawing.Size(111, 20);
+            this.btnDSVT.Text = "In danh sách VT";
+            this.btnDSVT.Click += new System.EventHandler(this.btnDSVT_Click);
+            // 
             // ComponentVT
             // 
             this.Appearance.BackColor = System.Drawing.Color.Aqua;
@@ -247,5 +260,6 @@
         private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
         private DevExpress.XtraGrid.GridControl vattuGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewVatTu;
+        private System.Windows.Forms.ToolStripButton btnDSVT;
     }
 }

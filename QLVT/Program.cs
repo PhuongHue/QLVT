@@ -16,8 +16,6 @@ namespace QLVT
     {
         public static KetNoiDB _ketNoiDB;
 
-        public static FormLogin _formLogin;
-
         public static QLVT_CN_DataSet QLVT_CN_DataSet = new QLVT_CN_DataSet();
 
         public static TableAdapterManager TableAdapterManager = new TableAdapterManager();
@@ -34,6 +32,9 @@ namespace QLVT
 
         public static SP_List_LOGINTableAdapter SP_List_LOGINTableAdapter = new SP_List_LOGINTableAdapter();
         public static QueriesTableAdapter QueriesTableAdapter = new QueriesTableAdapter();
+
+        public static bool running = true;
+
         public static void FillAllTable()
         {
             try
@@ -60,25 +61,25 @@ namespace QLVT
 
         public static void updateAll()
         {
-            if(_ketNoiDB.GroupId == "CONGTY")
+            if (_ketNoiDB.GroupId == "CONGTY")
             {
                 MessageBox.Show("Nhóm công ty không có quyền sửa đổi.");
                 FillAllTable();
             }
             else
-            try
-            {
-                TableAdapterManager.UpdateAll(QLVT_CN_DataSet);
-            }
-            catch (SqlException e)
-            {
-                MessageBox.Show(e.Message);
-                MessageBox.Show(SqlMessageResolver.SqlMessageResolve(e.Message));
-            }
-            catch (ArgumentException e)
-            {
-                MessageBox.Show(e.Message);
-            }
+                try
+                {
+                    TableAdapterManager.UpdateAll(QLVT_CN_DataSet);
+                }
+                catch (SqlException e)
+                {
+                    MessageBox.Show(e.Message);
+                    MessageBox.Show(SqlMessageResolver.SqlMessageResolve(e.Message));
+                }
+                catch (ArgumentException e)
+                {
+                    MessageBox.Show(e.Message);
+                }
         }
 
         public static void ChangeConnection(SqlConnection sqlConnection)
@@ -94,10 +95,10 @@ namespace QLVT
             NhanVienTableAdapter.Connection = sqlConnection;
             PhieuNhapTableAdapter.Connection = sqlConnection;
             VattuTableAdapter.Connection = sqlConnection;
-            
+
             //SPs
             SP_List_LOGINTableAdapter.Connection = sqlConnection;
-            
+
         }
 
         private static void InitServices()
@@ -125,7 +126,6 @@ namespace QLVT
             VattuTableAdapter.ClearBeforeFill = true;
 
             _ketNoiDB = new KetNoiDB();
-            _formLogin = new FormLogin();
         }
         /// <summary>
         /// The main entry point for the application.
@@ -141,12 +141,15 @@ namespace QLVT
             UserLookAndFeel.Default.SetSkinStyle("DevExpress Style");
 
             InitServices();
-
-            Application.Run(_formLogin);
-            if (_ketNoiDB.Ready)
+            while (running)
             {
-                Application.Run(new FormMain());
+                Application.Run(new FormLogin());
+                if (_ketNoiDB.Ready)
+                {
+                    Application.Run(new FormMain());
+                }
             }
+
         }
     }
 }

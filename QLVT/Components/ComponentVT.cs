@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QLVT.BatLoi;
+using QLVT.BaoCao;
 
 namespace QLVT.Components
 {
@@ -46,6 +47,11 @@ namespace QLVT.Components
         private void gridViewVatTu_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
             btnAddNewVT.Enabled = true;
+        }
+
+        private void btnDSVT_Click(object sender, EventArgs e)
+        {
+           new ReportDSVT();
         }
     }
 }

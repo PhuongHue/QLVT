@@ -16,6 +16,8 @@ namespace QLVT.BaoCao
             string startDate = $"{start.Day}-{start.Month}-{start.Year}";
             string endDate = $"{end.Day}-{end.Month}-{end.Year}";
 
+            xrLabelDate.Text = $"Từ ngày: {startDate} đến ngày {endDate}";
+
             sP_TKPXTableAdapter1.Fill(qlvT_CN_DataSet1.SP_TKPX, startDate, endDate, ct);
 
             this.ShowPreview();

@@ -58,5 +58,10 @@ namespace QLVT
         {
             Program.FillAllTable();
         }
+
+        private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Program._ketNoiDB.Ready = false;
+        }
     }
 }

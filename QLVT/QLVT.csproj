@@ -92,6 +92,12 @@
     <Compile Include="BaoCao\ReportDSNV.Designer.cs">
       <DependentUpon>ReportDSNV.cs</DependentUpon>
     </Compile>
+    <Compile Include="BaoCao\ReportDSVT.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="BaoCao\ReportDSVT.Designer.cs">
+      <DependentUpon>ReportDSVT.cs</DependentUpon>
+    </Compile>
     <Compile Include="BaoCao\ReportTKPN.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -192,6 +198,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\ReportDSNV.resx">
       <DependentUpon>ReportDSNV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BaoCao\ReportDSVT.resx">
+      <DependentUpon>ReportDSVT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BaoCao\ReportTKPN.resx">
       <DependentUpon>ReportTKPN.cs</DependentUpon>

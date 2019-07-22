@@ -13,9 +13,12 @@ namespace QLVT.BaoCao
         {
             InitializeComponent();
             sP_TKPNTableAdapter1.Connection = Program._ketNoiDB.sqlConnection;
+
             string startDate = $"{start.Day}-{start.Month}-{start.Year}";
             string endDate = $"{end.Day}-{end.Month}-{end.Year}";
-            
+
+            xrLabelDate.Text = $"Từ ngày: {startDate} đến ngày {endDate}";
+
             sP_TKPNTableAdapter1.Fill(qlvT_CN_DataSet1.SP_TKPN,startDate, endDate, ct);
             this.ShowPreview();
         }

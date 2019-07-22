@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
@@ -45,7 +44,7 @@
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource();
             this.reportHeaderBand1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
@@ -72,6 +71,7 @@
             this.qlvT_CN_DataSet1 = new QLVT.QLVT_CN_DataSet();
             this.chiNhanhTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.ChiNhanhTableAdapter();
             this.sP_TKPXTableAdapter1 = new QLVT.QLVT_CN_DataSetTableAdapters.SP_TKPXTableAdapter();
+            this.xrLabelDate = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qlvT_CN_DataSet1)).BeginInit();
@@ -211,8 +211,9 @@
             // reportHeaderBand1
             // 
             this.reportHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabelDate,
             this.xrLabel1});
-            this.reportHeaderBand1.HeightF = 60F;
+            this.reportHeaderBand1.HeightF = 75.08335F;
             this.reportHeaderBand1.Name = "reportHeaderBand1";
             // 
             // xrLabel1
@@ -436,6 +437,14 @@
             // 
             this.sP_TKPXTableAdapter1.ClearBeforeFill = true;
             // 
+            // xrLabelDate
+            // 
+            this.xrLabelDate.LocationFloat = new DevExpress.Utils.PointFloat(101.0417F, 42.08336F);
+            this.xrLabelDate.Name = "xrLabelDate";
+            this.xrLabelDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
+            this.xrLabelDate.SizeF = new System.Drawing.SizeF(450F, 23F);
+            this.xrLabelDate.Text = "date";
+            // 
             // ReportTKPX
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -503,5 +512,6 @@
         private QLVT_CN_DataSet qlvT_CN_DataSet1;
         private QLVT_CN_DataSetTableAdapters.ChiNhanhTableAdapter chiNhanhTableAdapter;
         private QLVT_CN_DataSetTableAdapters.SP_TKPXTableAdapter sP_TKPXTableAdapter1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabelDate;
     }
 }
