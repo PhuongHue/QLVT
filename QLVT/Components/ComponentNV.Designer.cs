@@ -28,16 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComponentNV));
             this.qLVT_CN_DataSet = new QLVT.QLVT_CN_DataSet();
-            this.chiNhanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.chiNhanhBindingSource = new System.Windows.Forms.BindingSource();
             this.chiNhanhTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.ChiNhanhTableAdapter();
             this.tableAdapterManager = new QLVT.QLVT_CN_DataSetTableAdapters.TableAdapterManager();
             this.nhanVienTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.NhanVienTableAdapter();
-            this.chiNhanhBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
+            this.chiNhanhBindingNavigator = new System.Windows.Forms.BindingNavigator();
             this.btnAddNewItemNV = new System.Windows.Forms.ToolStripButton();
-            this.fKNhanVienChiNhanhBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fKNhanVienChiNhanhBindingSource = new System.Windows.Forms.BindingSource();
             this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
             this.btnDeleteItemNV = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
@@ -48,6 +47,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnInDSNV = new System.Windows.Forms.ToolStripButton();
             this.chiNhanhGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMANV = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -58,7 +58,6 @@
             this.colLUONG = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colMACN = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTrangThaiXoa = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnInDSNV = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chiNhanhBindingNavigator)).BeginInit();
@@ -106,7 +105,7 @@
             this.chiNhanhBindingNavigator.AddNewItem = this.btnAddNewItemNV;
             this.chiNhanhBindingNavigator.BindingSource = this.fKNhanVienChiNhanhBindingSource;
             this.chiNhanhBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.chiNhanhBindingNavigator.DeleteItem = this.btnDeleteItemNV;
+            this.chiNhanhBindingNavigator.DeleteItem = null;
             this.chiNhanhBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
             this.bindingNavigatorMovePreviousItem,
@@ -163,6 +162,7 @@
             this.btnDeleteItemNV.RightToLeftAutoMirrorImage = true;
             this.btnDeleteItemNV.Size = new System.Drawing.Size(60, 20);
             this.btnDeleteItemNV.Text = "Delete";
+            this.btnDeleteItemNV.Click += new System.EventHandler(this.btnDeleteItemNV_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -223,6 +223,17 @@
             // 
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
+            // 
+            // btnInDSNV
+            // 
+            this.btnInDSNV.BackColor = System.Drawing.Color.Aqua;
+            this.btnInDSNV.Image = ((System.Drawing.Image)(resources.GetObject("btnInDSNV.Image")));
+            this.btnInDSNV.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInDSNV.Margin = new System.Windows.Forms.Padding(5);
+            this.btnInDSNV.Name = "btnInDSNV";
+            this.btnInDSNV.Size = new System.Drawing.Size(70, 20);
+            this.btnInDSNV.Text = "In DSNV";
+            this.btnInDSNV.Click += new System.EventHandler(this.btnInDSNV_Click);
             // 
             // chiNhanhGridControl
             // 
@@ -305,19 +316,9 @@
             // 
             this.colTrangThaiXoa.FieldName = "TrangThaiXoa";
             this.colTrangThaiXoa.Name = "colTrangThaiXoa";
+            this.colTrangThaiXoa.OptionsColumn.AllowEdit = false;
             this.colTrangThaiXoa.Visible = true;
             this.colTrangThaiXoa.VisibleIndex = 7;
-            // 
-            // btnInDSNV
-            // 
-            this.btnInDSNV.BackColor = System.Drawing.Color.Aqua;
-            this.btnInDSNV.Image = ((System.Drawing.Image)(resources.GetObject("btnInDSNV.Image")));
-            this.btnInDSNV.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnInDSNV.Margin = new System.Windows.Forms.Padding(5);
-            this.btnInDSNV.Name = "btnInDSNV";
-            this.btnInDSNV.Size = new System.Drawing.Size(70, 20);
-            this.btnInDSNV.Text = "In DSNV";
-            this.btnInDSNV.Click += new System.EventHandler(this.btnInDSNV_Click);
             // 
             // ComponentNV
             // 

@@ -33,6 +33,7 @@ namespace QLVT.Components
         private void bindingNavigatorAddNewItem_Click(object sender, EventArgs e)
         {
             btnAddNewItemNV.Enabled = false;
+            ((DataRowView)fKNhanVienChiNhanhBindingSource.Current)["TrangThaiXoa"] = 0;
         }
 
         private void gridView1_RowUpdated(object sender, DevExpress.XtraGrid.Views.Base.RowObjectEventArgs e)
@@ -49,6 +50,11 @@ namespace QLVT.Components
         private void btnInDSNV_Click(object sender, EventArgs e)
         {
             new ReportDSNV();
+        }
+
+        private void btnDeleteItemNV_Click(object sender, EventArgs e)
+        {
+            ((DataRowView)fKNhanVienChiNhanhBindingSource.Current)["TrangThaiXoa"] = 1;
         }
     }
 }

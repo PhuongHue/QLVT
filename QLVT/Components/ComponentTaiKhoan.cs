@@ -40,10 +40,8 @@ namespace QLVT.Components
 
         private void btnTaoTK_Click(object sender, EventArgs e)
         {
-            string SP_name = "";
-            if (Program._ketNoiDB.GroupId == "CONGTY") SP_name = "SP_TAOLOGIN_CONGTY";
-            if (Program._ketNoiDB.GroupId == "CHINHANH") SP_name = "SP_TAOLOGIN_CHINHANH";
-
+            string SP_name = "SP_TAOLOGIN";
+           
             SqlDataReader res =  Program._ketNoiDB.excuteSP(
                     SP_name +
                     $" @LGNAME = '{txtBoxLoginName.Text}', " +

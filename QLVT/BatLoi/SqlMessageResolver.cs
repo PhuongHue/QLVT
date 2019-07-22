@@ -41,7 +41,7 @@ namespace QLVT.BatLoi
                 column += "tại cột ";
                 int index = Message.IndexOf("column") + 8;
                 if(index >=0)
-                while (Message[index] !='\'' || Message[index] != ' ')
+                while (Message[index] !='\'' && Message[index] != ' ')
                 {
                     column += Message[index];
                     index++;
