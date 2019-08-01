@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QLVT.BatLoi;
 using QLVT.BaoCao;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLVT.Components
 {
@@ -73,6 +74,60 @@ namespace QLVT.Components
         private void btnTKPX_Click(object sender, EventArgs e)
         {
             new FormReportTKPX().Show();
+        }
+
+        private void gridViewPX_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            string error = "";
+            switch (e.Column.FieldName)
+            {
+                case "MAPX":
+                    error = Validation.validateCode("Mã phiếu xuất", e.Value.ToString());
+                    break;
+                case "HOTENKH":
+                    error = Validation.validateName("Họ tên khách hàng", e.Value.ToString());
+                    break;
+            }
+            view.SetColumnError(view.Columns[e.Column.FieldName], error);
+        }
+
+        private void gridViewPX_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            if (view.HasColumnErrors)
+            {
+                e.Valid = false;
+                e.ErrorText = "Nhập liệu có lỗi tại bảng Phiếu xuất.";
+                return;
+            }
+        }
+
+        private void gridViewCTPX_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            string error = "";
+            switch (e.Column.FieldName)
+            {
+                case "SOLUONG":
+                    if ((int)e.Value <= 0) error += "Số lượng không được nhỏ hơn hoặc bằng 0";
+                    break;
+                case "DONGIA":
+                    if ((int)e.Value <= 0) error += "Đơn giá không nhỏ hơn hoặc bằng 0";
+                    break;
+            }
+            view.SetColumnError(view.Columns[e.Column.FieldName], error);
+        }
+
+        private void gridViewCTPX_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            if (view.HasColumnErrors)
+            {
+                e.Valid = false;
+                e.ErrorText = "Nhập liệu có lỗi tại bảng Chi tiết phiếu xuất.";
+                return;
+            }
         }
     }
 }

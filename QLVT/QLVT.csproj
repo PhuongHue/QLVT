@@ -111,6 +111,7 @@
       <DependentUpon>ReportTKPX.cs</DependentUpon>
     </Compile>
     <Compile Include="BatLoi\SqlMessageResolver.cs" />
+    <Compile Include="BatLoi\Validation.cs" />
     <Compile Include="Components\ComponentBaoCao.cs">
       <SubType>UserControl</SubType>
     </Compile>

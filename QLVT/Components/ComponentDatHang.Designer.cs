@@ -59,6 +59,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnInDHCCPN = new System.Windows.Forms.ToolStripButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.cTDHBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
             this.btnAddNewCTDDH = new System.Windows.Forms.ToolStripButton();
@@ -85,7 +86,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cTDDHTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.CTDDHTableAdapter();
             this.vattuTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.VattuTableAdapter();
-            this.btnInDHCCPN = new System.Windows.Forms.ToolStripButton();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.khoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.datHangBindingSource)).BeginInit();
@@ -382,6 +382,15 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
+            // btnInDHCCPN
+            // 
+            this.btnInDHCCPN.Image = ((System.Drawing.Image)(resources.GetObject("btnInDHCCPN.Image")));
+            this.btnInDHCCPN.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnInDHCCPN.Name = "btnInDHCCPN";
+            this.btnInDHCCPN.Size = new System.Drawing.Size(121, 20);
+            this.btnInDHCCPN.Text = "In DH chưa có PN";
+            this.btnInDHCCPN.Click += new System.EventHandler(this.btnInDHCCPN_Click);
+            // 
             // panel2
             // 
             this.panel2.AutoScroll = true;
@@ -539,6 +548,8 @@
             this.gridViewCTDDH.GridControl = this.cTDDHGridControl;
             this.gridViewCTDDH.Name = "gridViewCTDDH";
             this.gridViewCTDDH.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewCTDDH_FocusedRowChanged);
+            this.gridViewCTDDH.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewCTDDH_CellValueChanged);
+            this.gridViewCTDDH.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridViewCTDDH_ValidateRow);
             this.gridViewCTDDH.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewCTDDH_RowUpdated);
             // 
             // colMAVT
@@ -560,6 +571,7 @@
             // colDONGIA
             // 
             this.colDONGIA.Caption = "Đơn giá";
+            this.colDONGIA.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric;
             this.colDONGIA.FieldName = "DONGIA";
             this.colDONGIA.Name = "colDONGIA";
             this.colDONGIA.Visible = true;
@@ -622,15 +634,6 @@
             // vattuTableAdapter
             // 
             this.vattuTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnInDHCCPN
-            // 
-            this.btnInDHCCPN.Image = ((System.Drawing.Image)(resources.GetObject("btnInDHCCPN.Image")));
-            this.btnInDHCCPN.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnInDHCCPN.Name = "btnInDHCCPN";
-            this.btnInDHCCPN.Size = new System.Drawing.Size(121, 20);
-            this.btnInDHCCPN.Text = "In DH chưa có PN";
-            this.btnInDHCCPN.Click += new System.EventHandler(this.btnInDHCCPN_Click);
             // 
             // ComponentDatHang
             // 

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
@@ -42,10 +43,9 @@
             this.xrTableCell14 = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource();
+            this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.reportHeaderBand1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrLabelDate = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
@@ -71,7 +71,6 @@
             this.qlvT_CN_DataSet1 = new QLVT.QLVT_CN_DataSet();
             this.chiNhanhTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.ChiNhanhTableAdapter();
             this.sP_TKPXTableAdapter1 = new QLVT.QLVT_CN_DataSetTableAdapters.SP_TKPXTableAdapter();
-            this.xrLabelDate = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.qlvT_CN_DataSet1)).BeginInit();
@@ -161,32 +160,10 @@
             // 
             // BottomMargin
             // 
-            this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPageInfo1,
-            this.xrPageInfo2});
             this.BottomMargin.HeightF = 100F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrPageInfo1
-            // 
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(6F, 6F);
-            this.xrPageInfo1.Name = "xrPageInfo1";
-            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(313F, 23F);
-            this.xrPageInfo1.StyleName = "PageInfo";
-            // 
-            // xrPageInfo2
-            // 
-            this.xrPageInfo2.Format = "Page {0} of {1}";
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(331F, 6F);
-            this.xrPageInfo2.Name = "xrPageInfo2";
-            this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPageInfo2.SizeF = new System.Drawing.SizeF(313F, 23F);
-            this.xrPageInfo2.StyleName = "PageInfo";
-            this.xrPageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // sqlDataSource1
             // 
@@ -216,6 +193,16 @@
             this.reportHeaderBand1.HeightF = 75.08335F;
             this.reportHeaderBand1.Name = "reportHeaderBand1";
             // 
+            // xrLabelDate
+            // 
+            this.xrLabelDate.LocationFloat = new DevExpress.Utils.PointFloat(101.0417F, 42.08336F);
+            this.xrLabelDate.Name = "xrLabelDate";
+            this.xrLabelDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabelDate.SizeF = new System.Drawing.SizeF(450F, 23F);
+            this.xrLabelDate.StylePriority.UseTextAlignment = false;
+            this.xrLabelDate.Text = "date";
+            this.xrLabelDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleCenter;
+            // 
             // xrLabel1
             // 
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(6F, 6F);
@@ -237,12 +224,14 @@
             // 
             // xrPanel1
             // 
+            this.xrPanel1.BorderColor = System.Drawing.Color.Transparent;
             this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable1});
             this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPanel1.Name = "xrPanel1";
             this.xrPanel1.SizeF = new System.Drawing.SizeF(650F, 48F);
             this.xrPanel1.StyleName = "DetailCaptionBackground3";
+            this.xrPanel1.StylePriority.UseBorderColor = false;
             // 
             // xrTable1
             // 
@@ -289,7 +278,7 @@
             this.xrTableCell5.StylePriority.UseBorderColor = false;
             this.xrTableCell5.StylePriority.UseBorders = false;
             this.xrTableCell5.StylePriority.UseBorderWidth = false;
-            this.xrTableCell5.Text = "Tên VT";
+            this.xrTableCell5.Text = "Tên vật tư";
             this.xrTableCell5.Weight = 0.4D;
             // 
             // xrTableCell6
@@ -305,7 +294,7 @@
             this.xrTableCell6.StylePriority.UseBorders = false;
             this.xrTableCell6.StylePriority.UseBorderWidth = false;
             this.xrTableCell6.StylePriority.UseTextAlignment = false;
-            this.xrTableCell6.Text = "Tổng SL";
+            this.xrTableCell6.Text = "Tổng số lượng";
             this.xrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrTableCell6.Weight = 0.4D;
             // 
@@ -437,14 +426,6 @@
             // 
             this.sP_TKPXTableAdapter1.ClearBeforeFill = true;
             // 
-            // xrLabelDate
-            // 
-            this.xrLabelDate.LocationFloat = new DevExpress.Utils.PointFloat(101.0417F, 42.08336F);
-            this.xrLabelDate.Name = "xrLabelDate";
-            this.xrLabelDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96F);
-            this.xrLabelDate.SizeF = new System.Drawing.SizeF(450F, 23F);
-            this.xrLabelDate.Text = "date";
-            // 
             // ReportTKPX
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -483,8 +464,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell12;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell13;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell14;
-        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
-        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo2;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.ReportHeaderBand reportHeaderBand1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;

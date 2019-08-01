@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QLVT.BatLoi;
 using QLVT.BaoCao;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLVT.Components
 {
@@ -52,6 +53,39 @@ namespace QLVT.Components
         private void btnDSVT_Click(object sender, EventArgs e)
         {
            new ReportDSVT();
+        }
+
+        private void gridViewVatTu_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            string error = "";
+            switch (e.Column.FieldName)
+            {
+                case "MAVT":
+                    error = Validation.validateNumber("Mã vật tư", e.Value.ToString());
+                    break;
+                case "TENVT":
+                    error = Validation.validateName("Tên vật tư", e.Value.ToString());
+                    break;
+                case "DVT":
+                    error = Validation.validateCommonText("Đơn vị tính", e.Value.ToString());
+                    break;
+                case "SOLUONGTON":
+                    if ((int)e.Value < 0) error += "Số lượng tồm không được nhỏ hơn 0";
+                    break;
+            }
+            view.SetColumnError(view.Columns[e.Column.FieldName], error);
+        }
+
+        private void gridViewVatTu_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            if (view.HasColumnErrors)
+            {
+                e.Valid = false;
+                e.ErrorText = "Nhập liệu có lỗi.";
+                return;
+            }
         }
     }
 }

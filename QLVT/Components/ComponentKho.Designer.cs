@@ -240,10 +240,13 @@
             this.gridViewKho.GridControl = this.chiNhanhGridControl;
             this.gridViewKho.Name = "gridViewKho";
             this.gridViewKho.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewKho_FocusedRowChanged);
+            this.gridViewKho.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewKho_CellValueChanged);
+            this.gridViewKho.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridViewKho_ValidateRow);
             this.gridViewKho.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewKho_RowUpdated);
             // 
             // colMAKHO
             // 
+            this.colMAKHO.Caption = "Mã kho";
             this.colMAKHO.FieldName = "MAKHO";
             this.colMAKHO.Name = "colMAKHO";
             this.colMAKHO.Visible = true;
@@ -251,6 +254,7 @@
             // 
             // colTENKHO
             // 
+            this.colTENKHO.Caption = "Tên kho";
             this.colTENKHO.FieldName = "TENKHO";
             this.colTENKHO.Name = "colTENKHO";
             this.colTENKHO.Visible = true;
@@ -258,6 +262,7 @@
             // 
             // colDIACHI
             // 
+            this.colDIACHI.Caption = "Địa chỉ";
             this.colDIACHI.FieldName = "DIACHI";
             this.colDIACHI.Name = "colDIACHI";
             this.colDIACHI.Visible = true;
@@ -265,6 +270,7 @@
             // 
             // colMACN
             // 
+            this.colMACN.Caption = "Mã chi nhánh";
             this.colMACN.FieldName = "MACN";
             this.colMACN.Name = "colMACN";
             this.colMACN.Visible = true;

@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
+using System.Windows.Forms;
 
 namespace QLVT.BaoCao
 {
@@ -19,8 +20,10 @@ namespace QLVT.BaoCao
             xrLabelDate.Text = $"Từ ngày: {startDate} đến ngày {endDate}";
 
             sP_TKPXTableAdapter1.Fill(qlvT_CN_DataSet1.SP_TKPX, startDate, endDate, ct);
-
-            this.ShowPreview();
+            if (qlvT_CN_DataSet1.SP_TKPX.Count == 0)
+                MessageBox.Show($"Không có kết quả từ ngày {startDate} đến ngày {endDate}.");
+            else
+                this.ShowPreview();
         }
 
     }

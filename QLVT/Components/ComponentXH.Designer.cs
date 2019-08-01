@@ -50,6 +50,7 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnTKPX = new System.Windows.Forms.ToolStripButton();
             this.phieuXuatGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridViewPX = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colMAPX = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -85,7 +86,6 @@
             this.vattuTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.VattuTableAdapter();
             this.phieuXuatTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.PhieuXuatTableAdapter();
             this.cTPXTableAdapter = new QLVT.QLVT_CN_DataSetTableAdapters.CTPXTableAdapter();
-            this.btnTKPX = new System.Windows.Forms.ToolStripButton();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.khoBindingSource)).BeginInit();
@@ -309,6 +309,17 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
+            // btnTKPX
+            // 
+            this.btnTKPX.BackColor = System.Drawing.Color.Aqua;
+            this.btnTKPX.Image = ((System.Drawing.Image)(resources.GetObject("btnTKPX.Image")));
+            this.btnTKPX.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnTKPX.Margin = new System.Windows.Forms.Padding(5);
+            this.btnTKPX.Name = "btnTKPX";
+            this.btnTKPX.Size = new System.Drawing.Size(94, 20);
+            this.btnTKPX.Text = "Thống kê PX";
+            this.btnTKPX.Click += new System.EventHandler(this.btnTKPX_Click);
+            // 
             // phieuXuatGridControl
             // 
             this.phieuXuatGridControl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -334,10 +345,13 @@
             this.gridViewPX.GridControl = this.phieuXuatGridControl;
             this.gridViewPX.Name = "gridViewPX";
             this.gridViewPX.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewPX_FocusedRowChanged);
+            this.gridViewPX.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewPX_CellValueChanged);
+            this.gridViewPX.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridViewPX_ValidateRow);
             this.gridViewPX.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewPX_RowUpdated);
             // 
             // colMAPX
             // 
+            this.colMAPX.Caption = "Mã phiếu xuất";
             this.colMAPX.FieldName = "MAPX";
             this.colMAPX.Name = "colMAPX";
             this.colMAPX.Visible = true;
@@ -345,6 +359,7 @@
             // 
             // colNGAY
             // 
+            this.colNGAY.Caption = "Ngày";
             this.colNGAY.FieldName = "NGAY";
             this.colNGAY.Name = "colNGAY";
             this.colNGAY.Visible = true;
@@ -352,6 +367,7 @@
             // 
             // colHOTENKH
             // 
+            this.colHOTENKH.Caption = "Họ tên khách hàng";
             this.colHOTENKH.FieldName = "HOTENKH";
             this.colHOTENKH.Name = "colHOTENKH";
             this.colHOTENKH.Visible = true;
@@ -359,15 +375,19 @@
             // 
             // colMANV
             // 
+            this.colMANV.Caption = "Mã nhân viên";
             this.colMANV.FieldName = "MANV";
             this.colMANV.Name = "colMANV";
+            this.colMANV.OptionsColumn.AllowEdit = false;
             this.colMANV.Visible = true;
             this.colMANV.VisibleIndex = 3;
             // 
             // colMAKHO
             // 
+            this.colMAKHO.Caption = "Mã kho";
             this.colMAKHO.FieldName = "MAKHO";
             this.colMAKHO.Name = "colMAKHO";
+            this.colMAKHO.OptionsColumn.AllowEdit = false;
             this.colMAKHO.Visible = true;
             this.colMAKHO.VisibleIndex = 4;
             // 
@@ -530,24 +550,31 @@
             this.gridViewCTPX.GridControl = this.cTPXGridControl;
             this.gridViewCTPX.Name = "gridViewCTPX";
             this.gridViewCTPX.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewCTPX_FocusedRowChanged);
+            this.gridViewCTPX.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewCTPX_CellValueChanged);
+            this.gridViewCTPX.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridViewCTPX_ValidateRow);
             this.gridViewCTPX.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewCTPX_RowUpdated);
             // 
             // colMAPX1
             // 
+            this.colMAPX1.Caption = "Mã phiếu xuất";
             this.colMAPX1.FieldName = "MAPX";
             this.colMAPX1.Name = "colMAPX1";
+            this.colMAPX1.OptionsColumn.AllowEdit = false;
             this.colMAPX1.Visible = true;
             this.colMAPX1.VisibleIndex = 0;
             // 
             // colMAVT
             // 
+            this.colMAVT.Caption = "Mã vật tư";
             this.colMAVT.FieldName = "MAVT";
             this.colMAVT.Name = "colMAVT";
+            this.colMAVT.OptionsColumn.AllowEdit = false;
             this.colMAVT.Visible = true;
             this.colMAVT.VisibleIndex = 1;
             // 
             // colSOLUONG
             // 
+            this.colSOLUONG.Caption = "Số lượng tồn";
             this.colSOLUONG.FieldName = "SOLUONG";
             this.colSOLUONG.Name = "colSOLUONG";
             this.colSOLUONG.Visible = true;
@@ -555,6 +582,7 @@
             // 
             // colDONGIA
             // 
+            this.colDONGIA.Caption = "Đơn giá";
             this.colDONGIA.FieldName = "DONGIA";
             this.colDONGIA.Name = "colDONGIA";
             this.colDONGIA.Visible = true;
@@ -617,17 +645,6 @@
             // cTPXTableAdapter
             // 
             this.cTPXTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnTKPX
-            // 
-            this.btnTKPX.BackColor = System.Drawing.Color.Aqua;
-            this.btnTKPX.Image = ((System.Drawing.Image)(resources.GetObject("btnTKPX.Image")));
-            this.btnTKPX.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnTKPX.Margin = new System.Windows.Forms.Padding(5);
-            this.btnTKPX.Name = "btnTKPX";
-            this.btnTKPX.Size = new System.Drawing.Size(94, 20);
-            this.btnTKPX.Text = "Thống kê PX";
-            this.btnTKPX.Click += new System.EventHandler(this.btnTKPX_Click);
             // 
             // ComponentXH
             // 

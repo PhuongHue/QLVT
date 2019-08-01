@@ -42,8 +42,6 @@
             this.xrTableCell18 = new DevExpress.XtraReports.UI.XRTableCell();
             this.TopMargin = new DevExpress.XtraReports.UI.TopMarginBand();
             this.BottomMargin = new DevExpress.XtraReports.UI.BottomMarginBand();
-            this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
-            this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.reportHeaderBand1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
@@ -168,32 +166,10 @@
             // 
             // BottomMargin
             // 
-            this.BottomMargin.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPageInfo1,
-            this.xrPageInfo2});
             this.BottomMargin.HeightF = 100F;
             this.BottomMargin.Name = "BottomMargin";
             this.BottomMargin.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.BottomMargin.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrPageInfo1
-            // 
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(6F, 6F);
-            this.xrPageInfo1.Name = "xrPageInfo1";
-            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(313F, 23F);
-            this.xrPageInfo1.StyleName = "PageInfo";
-            // 
-            // xrPageInfo2
-            // 
-            this.xrPageInfo2.Format = "Page {0} of {1}";
-            this.xrPageInfo2.LocationFloat = new DevExpress.Utils.PointFloat(331F, 6F);
-            this.xrPageInfo2.Name = "xrPageInfo2";
-            this.xrPageInfo2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPageInfo2.SizeF = new System.Drawing.SizeF(313F, 23F);
-            this.xrPageInfo2.StyleName = "PageInfo";
-            this.xrPageInfo2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // sqlDataSource1
             // 
@@ -233,12 +209,16 @@
             // 
             // xrPanel1
             // 
+            this.xrPanel1.BorderColor = System.Drawing.Color.Transparent;
+            this.xrPanel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrTable1});
             this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPanel1.Name = "xrPanel1";
             this.xrPanel1.SizeF = new System.Drawing.SizeF(650F, 48F);
             this.xrPanel1.StyleName = "DetailCaptionBackground3";
+            this.xrPanel1.StylePriority.UseBorderColor = false;
+            this.xrPanel1.StylePriority.UseBorders = false;
             // 
             // xrTable1
             // 
@@ -273,7 +253,7 @@
             this.xrTableCell4.StylePriority.UseBorders = false;
             this.xrTableCell4.StylePriority.UseBorderWidth = false;
             this.xrTableCell4.StylePriority.UseTextAlignment = false;
-            this.xrTableCell4.Text = "MANV";
+            this.xrTableCell4.Text = "Mã nhân viên";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrTableCell4.Weight = 2D;
             // 
@@ -289,7 +269,7 @@
             this.xrTableCell5.StylePriority.UseBorderColor = false;
             this.xrTableCell5.StylePriority.UseBorders = false;
             this.xrTableCell5.StylePriority.UseBorderWidth = false;
-            this.xrTableCell5.Text = "HOTEN";
+            this.xrTableCell5.Text = "Họ và tên";
             this.xrTableCell5.Weight = 2D;
             // 
             // xrTableCell6
@@ -304,7 +284,7 @@
             this.xrTableCell6.StylePriority.UseBorderColor = false;
             this.xrTableCell6.StylePriority.UseBorders = false;
             this.xrTableCell6.StylePriority.UseBorderWidth = false;
-            this.xrTableCell6.Text = "DIACHI";
+            this.xrTableCell6.Text = "Địa chỉ";
             this.xrTableCell6.Weight = 2D;
             // 
             // xrTableCell7
@@ -319,7 +299,7 @@
             this.xrTableCell7.StylePriority.UseBorderColor = false;
             this.xrTableCell7.StylePriority.UseBorders = false;
             this.xrTableCell7.StylePriority.UseBorderWidth = false;
-            this.xrTableCell7.Text = "NGAYSINH";
+            this.xrTableCell7.Text = "Ngày sinh";
             this.xrTableCell7.Weight = 2D;
             // 
             // xrTableCell8
@@ -335,7 +315,7 @@
             this.xrTableCell8.StylePriority.UseBorders = false;
             this.xrTableCell8.StylePriority.UseBorderWidth = false;
             this.xrTableCell8.StylePriority.UseTextAlignment = false;
-            this.xrTableCell8.Text = "LUONG";
+            this.xrTableCell8.Text = "Lương";
             this.xrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrTableCell8.Weight = 2D;
             // 
@@ -351,7 +331,7 @@
             this.xrTableCell9.StylePriority.UseBorderColor = false;
             this.xrTableCell9.StylePriority.UseBorders = false;
             this.xrTableCell9.StylePriority.UseBorderWidth = false;
-            this.xrTableCell9.Text = "MACN";
+            this.xrTableCell9.Text = "Mã chi nhánh";
             this.xrTableCell9.Weight = 2D;
             // 
             // xrTableRow1
@@ -511,8 +491,6 @@
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell16;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell17;
         private DevExpress.XtraReports.UI.XRTableCell xrTableCell18;
-        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
-        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo2;
         private DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource1;
         private DevExpress.XtraReports.UI.ReportHeaderBand reportHeaderBand1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;

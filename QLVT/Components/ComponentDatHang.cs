@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QLVT.BatLoi;
 using QLVT.BaoCao;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLVT.Components
 {
@@ -72,6 +73,63 @@ namespace QLVT.Components
         private void btnInDHCCPN_Click(object sender, EventArgs e)
         {
             new ReportDHCCPN();
+        }
+
+        private void gridViewDatHang_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            string error = "";
+            switch (e.Column.FieldName)
+            {
+                case "MasoDDH":
+                    error = Validation.validateCode("Mã số đơn đặt hàng", e.Value.ToString());
+                    break;
+                case "NhaCC":
+                    error = Validation.validateName("Nhà cung cấp", e.Value.ToString());
+                    break;
+                case "DIACHI":
+                    error = Validation.validateCommonText("Địa chỉ", e.Value.ToString());
+                    break;
+            }
+            view.SetColumnError(view.Columns[e.Column.FieldName], error);
+        }
+
+        private void gridViewDatHang_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            if (view.HasColumnErrors)
+            {
+                e.Valid = false;
+                e.ErrorText = "Nhập liệu có lỗi tại bảng đơn đặt hàng.";
+                return;
+            }
+        }
+
+        private void gridViewCTDDH_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            string error = "";
+            switch (e.Column.FieldName)
+            {
+                case "SOLUONG":
+                    if ((int)e.Value <= 0) error += "Số lượng không được nhỏ hơn 0";
+                    break;
+                case "DONGIA":
+                    if ((int)e.Value <= 0) error += "Đơn giá không được nhỏ hơn 0";
+                    break;
+            }
+            view.SetColumnError(view.Columns[e.Column.FieldName], error);
+        }
+
+        private void gridViewCTDDH_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            if (view.HasColumnErrors)
+            {
+                e.Valid = false;
+                e.ErrorText = "Nhập liệu có lỗi tại bảng Chi tiết phiếu nhập.";
+                return;
+            }
         }
     }
 }

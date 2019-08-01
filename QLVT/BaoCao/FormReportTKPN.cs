@@ -20,6 +20,14 @@ namespace QLVT.BaoCao
 
         private void btnIn_Click(object sender, EventArgs e)
         {
+            if (DateTime.Compare(
+                dateTimePickerStart.Value,
+                dateTimePickerEnd.Value
+                ) > 0)
+            {
+                MessageBox.Show("Ngày bắt đầu không được lớn hơn ngày kết thúc");
+                return;
+            }
             int ct = 0;
             if (Program._ketNoiDB.GroupId == "CONGTY")
                 ct = 1;
@@ -30,9 +38,6 @@ namespace QLVT.BaoCao
                 );
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

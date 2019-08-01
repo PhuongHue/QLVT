@@ -38,14 +38,18 @@
             // 
             // dateTimePickerStart
             // 
-            this.dateTimePickerStart.Location = new System.Drawing.Point(195, 77);
+            this.dateTimePickerStart.CustomFormat = "d/M/yyyy";
+            this.dateTimePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerStart.Location = new System.Drawing.Point(201, 83);
             this.dateTimePickerStart.Name = "dateTimePickerStart";
             this.dateTimePickerStart.Size = new System.Drawing.Size(231, 21);
             this.dateTimePickerStart.TabIndex = 0;
             // 
             // dateTimePickerEnd
             // 
-            this.dateTimePickerEnd.Location = new System.Drawing.Point(196, 147);
+            this.dateTimePickerEnd.CustomFormat = "d/M/yyyy";
+            this.dateTimePickerEnd.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePickerEnd.Location = new System.Drawing.Point(202, 153);
             this.dateTimePickerEnd.Name = "dateTimePickerEnd";
             this.dateTimePickerEnd.Size = new System.Drawing.Size(230, 21);
             this.dateTimePickerEnd.TabIndex = 1;
@@ -54,18 +58,17 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(95, 83);
+            this.label1.Location = new System.Drawing.Point(101, 89);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(81, 13);
             this.label1.TabIndex = 2;
             this.label1.Text = "Ngày bắt đầu";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold);
-            this.label2.Location = new System.Drawing.Point(95, 153);
+            this.label2.Location = new System.Drawing.Point(101, 159);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(85, 13);
             this.label2.TabIndex = 2;
@@ -73,7 +76,7 @@
             // 
             // btnIn
             // 
-            this.btnIn.Location = new System.Drawing.Point(195, 218);
+            this.btnIn.Location = new System.Drawing.Point(201, 224);
             this.btnIn.Name = "btnIn";
             this.btnIn.Size = new System.Drawing.Size(115, 34);
             this.btnIn.TabIndex = 3;
@@ -85,12 +88,11 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(177, 21);
+            this.label3.Location = new System.Drawing.Point(183, 27);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(175, 19);
             this.label3.TabIndex = 2;
             this.label3.Text = "Thống kê nhập hàng";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
             // FormReportTKPN
             // 

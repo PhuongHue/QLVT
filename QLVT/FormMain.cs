@@ -8,6 +8,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
+using QLVT.Components;
 
 namespace QLVT
 {
@@ -28,6 +29,11 @@ namespace QLVT
             if(Program._ketNoiDB.GroupId != "CONGTY")
             {
                 v_DSPMComboBox.Enabled = false;
+            }
+            else
+            if(Program._ketNoiDB.GroupId != "USER")
+            {
+                pageTaiKhoan.PageVisible = false;
             }
         }
 
@@ -62,6 +68,7 @@ namespace QLVT
         private void FormMain_FormClosed(object sender, FormClosedEventArgs e)
         {
             Program._ketNoiDB.Ready = false;
+            Program._ketNoiDB.sqlConnection.Close();
         }
     }
 }

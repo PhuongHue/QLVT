@@ -45,9 +45,13 @@
             this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btnDSVT = new System.Windows.Forms.ToolStripButton();
             this.vattuGridControl = new DevExpress.XtraGrid.GridControl();
             this.gridViewVatTu = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.btnDSVT = new System.Windows.Forms.ToolStripButton();
+            this.colMAVT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTENVT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDVT = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSOLUONGTON = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.qLVT_CN_DataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vattuBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vattuBindingNavigator)).BeginInit();
@@ -188,6 +192,17 @@
             this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator2";
             this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 30);
             // 
+            // btnDSVT
+            // 
+            this.btnDSVT.BackColor = System.Drawing.Color.Aqua;
+            this.btnDSVT.Image = ((System.Drawing.Image)(resources.GetObject("btnDSVT.Image")));
+            this.btnDSVT.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btnDSVT.Margin = new System.Windows.Forms.Padding(5);
+            this.btnDSVT.Name = "btnDSVT";
+            this.btnDSVT.Size = new System.Drawing.Size(111, 20);
+            this.btnDSVT.Text = "In danh sách VT";
+            this.btnDSVT.Click += new System.EventHandler(this.btnDSVT_Click);
+            // 
             // vattuGridControl
             // 
             this.vattuGridControl.DataSource = this.vattuBindingSource;
@@ -202,21 +217,49 @@
             // 
             // gridViewVatTu
             // 
+            this.gridViewVatTu.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colMAVT,
+            this.colTENVT,
+            this.colDVT,
+            this.colSOLUONGTON});
             this.gridViewVatTu.GridControl = this.vattuGridControl;
             this.gridViewVatTu.Name = "gridViewVatTu";
             this.gridViewVatTu.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.gridViewVatTu_FocusedRowChanged);
+            this.gridViewVatTu.CellValueChanged += new DevExpress.XtraGrid.Views.Base.CellValueChangedEventHandler(this.gridViewVatTu_CellValueChanged);
+            this.gridViewVatTu.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridViewVatTu_ValidateRow);
             this.gridViewVatTu.RowUpdated += new DevExpress.XtraGrid.Views.Base.RowObjectEventHandler(this.gridViewVatTu_RowUpdated);
             // 
-            // btnDSVT
+            // colMAVT
             // 
-            this.btnDSVT.BackColor = System.Drawing.Color.Aqua;
-            this.btnDSVT.Image = ((System.Drawing.Image)(resources.GetObject("btnDSVT.Image")));
-            this.btnDSVT.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btnDSVT.Margin = new System.Windows.Forms.Padding(5);
-            this.btnDSVT.Name = "btnDSVT";
-            this.btnDSVT.Size = new System.Drawing.Size(111, 20);
-            this.btnDSVT.Text = "In danh sách VT";
-            this.btnDSVT.Click += new System.EventHandler(this.btnDSVT_Click);
+            this.colMAVT.Caption = "Mã vật tư";
+            this.colMAVT.FieldName = "MAVT";
+            this.colMAVT.Name = "colMAVT";
+            this.colMAVT.Visible = true;
+            this.colMAVT.VisibleIndex = 0;
+            // 
+            // colTENVT
+            // 
+            this.colTENVT.Caption = "Tên vật tư";
+            this.colTENVT.FieldName = "TENVT";
+            this.colTENVT.Name = "colTENVT";
+            this.colTENVT.Visible = true;
+            this.colTENVT.VisibleIndex = 1;
+            // 
+            // colDVT
+            // 
+            this.colDVT.Caption = "Đơn vị tính";
+            this.colDVT.FieldName = "DVT";
+            this.colDVT.Name = "colDVT";
+            this.colDVT.Visible = true;
+            this.colDVT.VisibleIndex = 2;
+            // 
+            // colSOLUONGTON
+            // 
+            this.colSOLUONGTON.Caption = "Số lượng tồn";
+            this.colSOLUONGTON.FieldName = "SOLUONGTON";
+            this.colSOLUONGTON.Name = "colSOLUONGTON";
+            this.colSOLUONGTON.Visible = true;
+            this.colSOLUONGTON.VisibleIndex = 3;
             // 
             // ComponentVT
             // 
@@ -261,5 +304,9 @@
         private DevExpress.XtraGrid.GridControl vattuGridControl;
         private DevExpress.XtraGrid.Views.Grid.GridView gridViewVatTu;
         private System.Windows.Forms.ToolStripButton btnDSVT;
+        private DevExpress.XtraGrid.Columns.GridColumn colMAVT;
+        private DevExpress.XtraGrid.Columns.GridColumn colTENVT;
+        private DevExpress.XtraGrid.Columns.GridColumn colDVT;
+        private DevExpress.XtraGrid.Columns.GridColumn colSOLUONGTON;
     }
 }

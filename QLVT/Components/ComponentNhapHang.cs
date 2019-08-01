@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QLVT.BatLoi;
 using QLVT.BaoCao;
+using DevExpress.XtraGrid.Views.Grid;
 
 namespace QLVT.Components
 {
@@ -74,6 +75,60 @@ namespace QLVT.Components
         private void btnTKPN_Click(object sender, EventArgs e)
         {
             new FormReportTKPN().Show();
+        }
+
+        private void gridViewPN_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            string error = "";
+            switch (e.Column.FieldName)
+            {
+                case "MAPN":
+                    error = Validation.validateCode("Mã vật tư", e.Value.ToString());
+                    break;
+                case "MasoDDH":
+                    error = Validation.validateCode("Tên vật tư", e.Value.ToString());
+                    break;
+            }
+            view.SetColumnError(view.Columns[e.Column.FieldName], error);
+        }
+
+        private void gridViewPN_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            if (view.HasColumnErrors)
+            {
+                e.Valid = false;
+                e.ErrorText = "Nhập liệu có lỗi tại bảng phiếu nhập.";
+                return;
+            }
+        }
+
+        private void gridViewCTPN_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            string error = "";
+            switch (e.Column.FieldName)
+            {
+                case "SOLUONG":
+                    if ((int)e.Value <= 0) error += "Số lượng không được âm";
+                    break;
+                case "DONGIA":
+                    if ((int)e.Value <= 0) error += "Đơn giá không được âm";
+                    break;
+            }
+            view.SetColumnError(view.Columns[e.Column.FieldName], error);
+        }
+
+        private void gridViewCTPN_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
+        {
+            GridView view = (GridView)sender;
+            if (view.HasColumnErrors)
+            {
+                e.Valid = false;
+                e.ErrorText = "Nhập liệu có lỗi tại bảng.";
+                return;
+            }
         }
     }
 }

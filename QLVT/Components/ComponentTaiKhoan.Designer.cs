@@ -250,6 +250,8 @@
             this.txtBoxPassword.Name = "txtBoxPassword";
             this.txtBoxPassword.Size = new System.Drawing.Size(232, 21);
             this.txtBoxPassword.TabIndex = 3;
+            this.txtBoxPassword.UseSystemPasswordChar = true;
+            this.txtBoxPassword.Leave += new System.EventHandler(this.txtBoxPassword_Validate);
             // 
             // txtBoxLoginName
             // 
@@ -260,6 +262,7 @@
             this.txtBoxLoginName.Name = "txtBoxLoginName";
             this.txtBoxLoginName.Size = new System.Drawing.Size(232, 21);
             this.txtBoxLoginName.TabIndex = 3;
+            this.txtBoxLoginName.Leave += new System.EventHandler(this.txtBoxLoginName_Validate);
             // 
             // label1
             // 

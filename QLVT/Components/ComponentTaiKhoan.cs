@@ -9,11 +9,15 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using System.Data.SqlClient;
+using QLVT.BatLoi;
 
 namespace QLVT.Components
 {
     public partial class ComponentTaiKhoan : DevExpress.XtraEditors.XtraUserControl
     {
+        private bool validLogin = false;
+        private bool validPass = false;
+
         public ComponentTaiKhoan()
         {
             InitializeComponent();
@@ -34,12 +38,18 @@ namespace QLVT.Components
             {
                 comBoxRole.Items.Add(new { Text = "Chi nhánh", Value = "CHINHANH" });
                 comBoxRole.Items.Add(new { Text = "User", Value = "USER" });
+                comBoxRole.SelectedIndex = 0;
             }
 
         }
 
         private void btnTaoTK_Click(object sender, EventArgs e)
         {
+            if(validLogin == false || validPass == false)
+            {
+                MessageBox.Show("Thôn tin không hợp lệ");
+                return;
+            }
             string SP_name = "SP_TAOLOGIN";
            
             SqlDataReader res =  Program._ketNoiDB.excuteSP(
@@ -65,6 +75,35 @@ namespace QLVT.Components
                     break;
                 default:
                     break;
+            }
+            res.Close();
+        }
+
+        private void txtBoxLoginName_Validate(object sender, EventArgs e)
+        {
+            string error = Validation.validateCode("Tên login", txtBoxLoginName.Text);
+            if (error != "")
+            {
+                validLogin = false;
+                MessageBox.Show(error, "Lỗi");
+            }
+            else
+            {
+                validLogin = true;
+            }
+        }
+
+        private void txtBoxPassword_Validate(object sender, EventArgs e)
+        {
+            string error = Validation.validateCode("Mật khẩu", txtBoxPassword.Text);
+            if (error != "")
+            {
+                validPass = false;
+                MessageBox.Show(error, "Lỗi");
+            }
+            else
+            {
+                validPass = true;
             }
         }
     }

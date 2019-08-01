@@ -20,7 +20,10 @@ namespace QLVT.BaoCao
             xrLabelDate.Text = $"Từ ngày: {startDate} đến ngày {endDate}";
 
             sP_TKPNTableAdapter1.Fill(qlvT_CN_DataSet1.SP_TKPN,startDate, endDate, ct);
-            this.ShowPreview();
+            if (qlvT_CN_DataSet1.SP_TKPN.Count == 0)
+                MessageBox.Show($"Không có kết quả từ ngày {startDate} đến ngày {endDate}.");
+            else
+                this.ShowPreview();
         }
 
     }

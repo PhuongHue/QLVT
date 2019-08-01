@@ -28,8 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.qLVT_MASTER_DataSet = new QLVT.QLVT_MASTER_DataSet();
-            this.v_DSPMBindingSource = new System.Windows.Forms.BindingSource();
+            this.v_DSPMBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.v_DSPMTableAdapter = new QLVT.QLVT_MASTER_DataSetTableAdapters.V_DSPMTableAdapter();
             this.v_DSPMComboBox = new System.Windows.Forms.ComboBox();
             this.LoginUserTextBox = new System.Windows.Forms.TextBox();
@@ -75,7 +76,7 @@
             this.LoginUserTextBox.Name = "LoginUserTextBox";
             this.LoginUserTextBox.Size = new System.Drawing.Size(232, 21);
             this.LoginUserTextBox.TabIndex = 2;
-            this.LoginUserTextBox.Text = "lt1";
+            this.LoginUserTextBox.Text = "tranthanh";
             // 
             // LoginPasswordTextBox
             // 
@@ -141,6 +142,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(566, 310);
+            this.ControlBox = false;
             this.Controls.Add(this.btnThoat);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label3);
