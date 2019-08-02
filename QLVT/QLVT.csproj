@@ -98,17 +98,17 @@
     <Compile Include="BaoCao\ReportDSVT.Designer.cs">
       <DependentUpon>ReportDSVT.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaoCao\ReportTKPN.cs">
+    <Compile Include="BaoCao\ReportTKN.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaoCao\ReportTKPN.Designer.cs">
-      <DependentUpon>ReportTKPN.cs</DependentUpon>
+    <Compile Include="BaoCao\ReportTKN.Designer.cs">
+      <DependentUpon>ReportTKN.cs</DependentUpon>
     </Compile>
-    <Compile Include="BaoCao\ReportTKPX.cs">
+    <Compile Include="BaoCao\ReportTKX.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="BaoCao\ReportTKPX.Designer.cs">
-      <DependentUpon>ReportTKPX.cs</DependentUpon>
+    <Compile Include="BaoCao\ReportTKX.Designer.cs">
+      <DependentUpon>ReportTKX.cs</DependentUpon>
     </Compile>
     <Compile Include="BatLoi\SqlMessageResolver.cs" />
     <Compile Include="BatLoi\Validation.cs" />
@@ -203,11 +203,11 @@
     <EmbeddedResource Include="BaoCao\ReportDSVT.resx">
       <DependentUpon>ReportDSVT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\ReportTKPN.resx">
-      <DependentUpon>ReportTKPN.cs</DependentUpon>
+    <EmbeddedResource Include="BaoCao\ReportTKN.resx">
+      <DependentUpon>ReportTKN.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BaoCao\ReportTKPX.resx">
-      <DependentUpon>ReportTKPX.cs</DependentUpon>
+    <EmbeddedResource Include="BaoCao\ReportTKX.resx">
+      <DependentUpon>ReportTKX.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Components\ComponentBaoCao.resx">
       <DependentUpon>ComponentBaoCao.cs</DependentUpon>

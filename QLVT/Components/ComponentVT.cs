@@ -71,7 +71,7 @@ namespace QLVT.Components
                     error = Validation.validateCommonText("Đơn vị tính", e.Value.ToString());
                     break;
                 case "SOLUONGTON":
-                    if ((int)e.Value < 0) error += "Số lượng tồm không được nhỏ hơn 0";
+                    if (Int32.Parse(e.Value.ToString()) < 0) error += "Số lượng tồm không được nhỏ hơn 0";
                     break;
             }
             view.SetColumnError(view.Columns[e.Column.FieldName], error);

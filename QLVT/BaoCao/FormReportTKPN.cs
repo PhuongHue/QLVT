@@ -28,14 +28,8 @@ namespace QLVT.BaoCao
                 MessageBox.Show("Ngày bắt đầu không được lớn hơn ngày kết thúc");
                 return;
             }
-            int ct = 0;
-            if (Program._ketNoiDB.GroupId == "CONGTY")
-                ct = 1;
-            new ReportTKPN(
-                    dateTimePickerStart.Value,
-                    dateTimePickerEnd.Value,
-                    ct
-                );
+            new ReportTKN(dateTimePickerStart.Value, dateTimePickerEnd.Value);
+            
         }
 
        

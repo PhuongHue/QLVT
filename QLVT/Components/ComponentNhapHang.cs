@@ -84,10 +84,10 @@ namespace QLVT.Components
             switch (e.Column.FieldName)
             {
                 case "MAPN":
-                    error = Validation.validateCode("Mã vật tư", e.Value.ToString());
+                    error = Validation.validateCode("Mã phiếu nhập", e.Value.ToString());
                     break;
                 case "MasoDDH":
-                    error = Validation.validateCode("Tên vật tư", e.Value.ToString());
+                    error = Validation.validateCode("Mã số đơn đặt hàng", e.Value.ToString());
                     break;
             }
             view.SetColumnError(view.Columns[e.Column.FieldName], error);
@@ -111,10 +111,10 @@ namespace QLVT.Components
             switch (e.Column.FieldName)
             {
                 case "SOLUONG":
-                    if ((int)e.Value <= 0) error += "Số lượng không được âm";
+                    if (Int32.Parse(e.Value.ToString()) <= 0) error += "Số lượng không được âm";
                     break;
                 case "DONGIA":
-                    if ((int)e.Value <= 0) error += "Đơn giá không được âm";
+                    if (Int32.Parse(e.Value.ToString()) <= 0) error += "Đơn giá không được âm";
                     break;
             }
             view.SetColumnError(view.Columns[e.Column.FieldName], error);

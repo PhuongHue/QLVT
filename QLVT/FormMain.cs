@@ -26,12 +26,13 @@ namespace QLVT
             tSLabelMNV.Text += Program._ketNoiDB.UserName;
             tSLabelName.Text += Program._ketNoiDB.FullName;
             tSLabelNhom.Text += Program._ketNoiDB.GroupId;
-            if(Program._ketNoiDB.GroupId != "CONGTY")
+
+            if (Program._ketNoiDB.GroupId != "CONGTY")
             {
                 v_DSPMComboBox.Enabled = false;
             }
             else
-            if(Program._ketNoiDB.GroupId != "USER")
+            if (Program._ketNoiDB.GroupId != "USER")
             {
                 pageTaiKhoan.PageVisible = false;
             }
@@ -41,6 +42,12 @@ namespace QLVT
         {
             // TODO: This line of code loads data into the 'qLVT_MASTER_DataSet.V_DSPM' table. You can move, or remove it, as needed.
             this.v_DSPMTableAdapter.Fill(this.qLVT_MASTER_DataSet.V_DSPM);
+            if (Program._ketNoiDB.GroupId == "CONGTY")
+                while (v_DSPMBindingSource.Position < v_DSPMBindingSource.Count - 1)
+                {
+                    if (((DataRowView)v_DSPMBindingSource.Current)["subscriber_server"] == Program._ketNoiDB.Server) break;
+                    v_DSPMBindingSource.MoveNext();
+                }
         }
 
         private void v_DSPMComboBox_SelectedIndexChanged(object sender, EventArgs e)

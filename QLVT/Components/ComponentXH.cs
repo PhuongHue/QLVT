@@ -110,10 +110,10 @@ namespace QLVT.Components
             switch (e.Column.FieldName)
             {
                 case "SOLUONG":
-                    if ((int)e.Value <= 0) error += "Số lượng không được nhỏ hơn hoặc bằng 0";
+                    if (Int32.Parse(e.Value.ToString()) <= 0) error += "Số lượng không được nhỏ hơn hoặc bằng 0";
                     break;
                 case "DONGIA":
-                    if ((int)e.Value <= 0) error += "Đơn giá không nhỏ hơn hoặc bằng 0";
+                    if (Int32.Parse(e.Value.ToString()) <= 0) error += "Đơn giá không nhỏ hơn hoặc bằng 0";
                     break;
             }
             view.SetColumnError(view.Columns[e.Column.FieldName], error);
